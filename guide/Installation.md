@@ -5,7 +5,7 @@
 ## ${\color{blue}Steps\space for\space Installation}$ 
 - ${\color{darkorange}1st\space Step - Partitioning}$
 - ${\color{darkorange}2nd\space Step - Installation}$
-- ${\color{darkorange}3rd\space Step - Dual\space Boot}$
+  
 #
 ### Prerequisites
 - _A Working Brain (most important of all)_
