@@ -1,8 +1,8 @@
-# _Windows Installation Guide for PocoF1 [Without PC]_
+# _Windows Installation Guide for Xiaomi Pad 5 [Without PC]_
 
-<img align="right" src="beryllium.png" width="400" alt="Windows installation on beryllium">
+<img align="right" src="beryllium.png" width="400" alt="Windows installation on NABU">
 
-[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinOnF1)
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinInstaller)
 
 ## ⚠️ ${\color{red}Warning}$
 - _We're not responsible for any damage. Do it on your own risk._
