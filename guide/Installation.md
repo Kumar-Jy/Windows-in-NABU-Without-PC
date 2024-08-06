@@ -1,5 +1,5 @@
 # PocoF1 Windows Installation [Without PC]
-<img align="right" src="beryllium.png" width="400" alt="Windows installation on beryllium">
+<img align="right" src="https://raw.githubusercontent.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/main/nabu.png" width="425" alt="Windows 11 Running On A Xiaomi Pad 5">
 
 [![download](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/e0fF1_bKQYE)
 ## ${\color{blue}Steps\space for\space Installation}$ 
@@ -9,13 +9,12 @@
 #
 ### Prerequisites
 - _A Working Brain (most important of all)_
-- [_Moded Ofox Recovery_](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/releases/tag/Moded-Ofox-Recovery)
-- [_Win Installer zip_](https://drive.google.com/file/d/1em2SfLIkgnwPX4nbaC0x1tZchvM3mDGy/view?usp=drivesdk)
+- [_Bootloader must be unlocked, if not, please follow this guide._](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
+- [_your device must be rooted, if not follow this guide_](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
 #
 ### ${\color{red}[WARNING]}$
 > - _All your data will be erased ! Back up now if needed._
 > - _Backup Important Partition (Boot, EFS, Modem and Persist) and copy it to outside phone memory_
-> - _Your phone must be rooted, if it is not, follow [root](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/blob/main/guide/root.md) guide before start the process._
 > - _Do not flash/run the same file/command twice unless specified._
 > - _Follow step by step guide, don't jump or skip any step._
 > - _YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS/FILE BELOW IF YOU DO THEM WRONG!!!_
@@ -23,59 +22,22 @@
 #
 
 ### **${\color{darkorange}1st\space Step - Partitioning}$**
-- Flash [Moded Ofox Recovery](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/releases/tag/Moded-Ofox-Recovery) either through your existing recovery or extract recovery.img from zip and flash through fastboot.
-- Type ` partition $ ` on recovery terminal _[Replace $ with the size of storage in GB you want for Windows, Ex. - for 40GB type `partition 40`] (do not add GB at the end.)_
-- If it asks you to run it once again, do so
-- Reboot to check if Android still works. If it doesn't boot, format userdata and Reboot.
-- #### ${\color{red}Note}$ :- 
-> - if your phone encrypted first unmount and format userdata then type above command to creat partition.
-> - If you already modified or installed Windows, first type ` restore ` then type above command to create new partition. 
+- Open android file manager, Creat a new folder and rename it to `UEFI`
+- Download [Moded twrp recovery](https://mega.nz/file/czUjGI4Z#mrzauyw4Pa99bHfX16BD5NH9RUnxf3K9meYVn4EoFGo) and place it to `UEFI` folder.
+- Download and Install [Woa Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), open it, allow root permission, then press quick boot to windows"
+- Now your device will boot in moded twrp recovery.
+- Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60` )
+- When finished click on reboot select slot_b and reboot to system. (If it booted to MIUI recovery just select factory reset and reboot)
+- Now finish android setup.
 #
 
 ### ${\color{darkorange}2nd\space Step - Installation}$
-- Reboot to recovery and flash [WinInstaller.zip](https://drive.google.com/file/d/1em2SfLIkgnwPX4nbaC0x1tZchvM3mDGy/view?usp=drivesdk) (_at least 6GB free space in phone memory required for flashing_)
-- That's all , 
- You don't need to touch you phone just sit back and watch all installation process start automatically and phone will reboot to windows setup.
-- #### ${\color{red}Note}$ :- 
-> - Must remove any attached usb device or charger before flashing or it will not install properly.
-> - For Sound and Rotation flash New [UEFI](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/releases/tag/UEFI-Boot-Image) after windows setup.
-> - Restore modem backup if cellular data not working.
-> - Wininstallar automatically creates backup of boot, efs and modem so if you forgot to take backup just copy `backup` folder from phone storage or from `cache` folder to MemoryCard/PenDrive.
-> - If you have to re-flash WinInstaller, first restore modem and android boot.img then flash wininstaller.zip
-> - for any installation error visit _[troubleshooting](troubleshooting.md)_
-
+- Download [WinInstaller.zip](https://mega.nz/file/9mFiWSIL#2Kmy_Zg1nh0OvR1wId9my6LYFSXtzv-IAGzHz4ogrt8).
+- Repeat [Step 1 and 2](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/edit/main/guide/Installation.md#colordarkorange1stspace-step---partitioning) from Partition stage.
+- Download and open [Woa helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA) - tap on backup - select android and windows one by one, then press on quick boot to windows.
+- Now your device will boot in moded twrp recovery.
+- Select Wininstaller and flash it.
+- Wait till all process completed and Windows setup appear. (It takes up to 15 minutes and eventually reboot 2 or 3 times.,)
+- For switch to android, double click on Sta.exe on desktop.
 #
-### ${\color{darkorange}Last\space step\space -Dual\space Boot\ Setup}$
-#### _Switch to Android_
-- Navigate to `` C:\sta `` and Install ` VC.exe `
-- create a shortcut of `sta.exe` to your desktop and Run it (you can also pin it to your start menu / taskbar for ease of access)
-#### _Switch to Windows_
-- Download and install the [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), open it and grant root access.
-- Download the new [UEFI](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/releases/tag/UEFI-Boot-Image) image for your panel and place it inside the folder named `UEFI` in your internal storage.
-- Return to the WOA Helper app, open `WOA TOOLBOX` - click on `FLASH UEFI` , Now restart your phone and it will boot in windows.
-#### ${\color{red}Note}$ :- 
--   Do Not use `QUICKBOOT TO WINDOWS` option it may wipe your SIM2 modem.
-#
-# _[Troubleshooting](troubleshooting.md)_
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
