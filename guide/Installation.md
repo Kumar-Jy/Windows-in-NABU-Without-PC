@@ -1,5 +1,5 @@
 # Xiaomi Pad 5 Windows Installation [Without PC]
-<img align="right" src="https://raw.githubusercontent.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/main/nabu.png" width="425" alt="Windows 11 Running On A Xiaomi Pad 5">
+<img align="right" src="nabu.png" width="425" alt="Windows 11 Running On A Xiaomi Pad 5">
 
 [![download](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/e0fF1_bKQYE)
 ## ${\color{blue}Steps\space for\space Installation}$ 
@@ -22,20 +22,18 @@
 #
 
 ### **${\color{darkorange}1st\space Step - Partitioning}$**
-- Open android file manager, Creat a new folder and rename it to `UEFI`
-- Download [boot-backup-creator.zip]() it will back of android boot.img to cust partition.
-- Download [Moded twrp recovery](https://mega.nz/file/czUjGI4Z#mrzauyw4Pa99bHfX16BD5NH9RUnxf3K9meYVn4EoFGo) and place it to `UEFI` folder.
-- Download and Install [Woa Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), open it, allow root permission, then click on `BACKUP BOOT` and select `ANDROID`.
-- Now press `QUICK BOOT TO WINDOWS` and your device will boot into moded twrp recovery.
+${\color{yellow}[Note]}$ :- If your rom not supported custom recovery or if you have not install any custome recovery, do follow this [partitioning guide](partition.md)
+- Download boot-backup-creator.zip it will back of android boot.img to cust partition.
+- Download and flash this [Moded twrp recovery](https://mega.nz/file/czUjGI4Z#mrzauyw4Pa99bHfX16BD5NH9RUnxf3K9meYVn4EoFGo). through your installed recovery.
 - Flash boot-backup.zip, this will copy your android boot.img to cust partition, so you can reboot back to android. [you can manually do this]
 - Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60` )
-- When finished, flash boot.img from `cust` and reboot to system. (If it booted to MIUI recovery just select factory reset and reboot)
+- When finished, reboot to system, if it failed to boot , reboot back to recovery and format userdata then reboot.
 - Now finish android setup.
 #
 
 ### ${\color{darkorange}2nd\space Step - Installation}$
 - Download [WinInstaller.zip](https://mega.nz/file/9mFiWSIL#2Kmy_Zg1nh0OvR1wId9my6LYFSXtzv-IAGzHz4ogrt8).
-- Repeat [Step 1 to 4](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/edit/main/guide/Installation.md#colordarkorange1stspace-step---partitioning) from Partition stape.
+- reboot back to moded twrp recovery if u have already installed or repeat [Step 1 to 4](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/edit/main/guide/Installation.md#colordarkorange1stspace-step---partitioning) from Partition guide.
 - Now your device will boot in moded twrp recovery.
 - Select Wininstaller and flash it.
 - Wait till all process completed and Windows setup appear. (It takes up to 15 minutes and eventually reboot 2 or 3 times.,)
