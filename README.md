@@ -1,6 +1,6 @@
 # _Windows Installation Guide for Xiaomi Pad 5 [Without PC]_
 
-<img align="right" src="beryllium.png" width="400" alt="Windows installation on NABU">
+<img align="right" src="nabu.png" width="400" alt="Windows installation on NABU">
 
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinInstaller)
 
