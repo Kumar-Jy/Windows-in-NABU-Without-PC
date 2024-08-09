@@ -19,7 +19,7 @@
 
 ### **${\color{darkorange}1st\space Step - Partitioning}$**
 - Open android file manager, Creat a new folder and rename it to `UEFI`
-- Download [boot-backup-creator.zip]() it will back of android boot.img to cust partition.
+- Download [boot-backup-creator.zip](boot-backup-creator.zip)it will backup android boot.img to cust partition.
 - Download [Moded twrp recovery](https://mega.nz/file/czUjGI4Z#mrzauyw4Pa99bHfX16BD5NH9RUnxf3K9meYVn4EoFGo) and place it to `UEFI` folder.
 - Download and Install [Woa Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), open it, allow root permission, then click on `BACKUP BOOT` and select `ANDROID`.
 - Now press `QUICK BOOT TO WINDOWS` and your device will boot into moded twrp recovery.
@@ -28,4 +28,4 @@
 - When finished, flash boot.img from `cust` and reboot to system. (If it booted to MIUI recovery just select factory reset and reboot)
 - Now finish android setup.
 #
-### [2nd Step - Installation]()
+### [2nd Step - Installation](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/Installation.md#colordarkorange2ndspace-step---installation)
