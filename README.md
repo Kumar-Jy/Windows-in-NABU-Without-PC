@@ -12,16 +12,16 @@
 ## ${\color{darkorange}Get\space started}$
 - [_Installation Instructions_](guide/Installation.md)
 
-- [_Update Drivers_](guide/update.md)
+- [_Update Drivers_]()
   
-- [_Troubleshooting_](guide/troubleshooting.md)
+- [_Troubleshooting_]()
 #
 ## ${\color{darkorange}Miscellaneous}$
-- [_Project Status_](guide/status.md)
+- [_Project Status_]()
 
-- [_Additional Materials_](guide/materials.md)
+- [_Additional Materials_]()
 
-- [_Uninstall Instructions_](guide/uninstall.md)
+- [_Uninstall Instructions_]()
 #
 ## ${\color{darkorange}Contributors}$
 
