@@ -23,7 +23,7 @@
 
 ### **${\color{darkorange}1st\space Step - Partitioning}$**
 ${\color{yellow}[Note]}$ :- If your rom not supported custom recovery or if you have not install any custome recovery, do follow this [partitioning guide](partition.md)
-- Download boot-backup-creator.zip it will back of android boot.img to cust partition.
+- Download [boot-backup-creator.zip](boot-backup-creator.zip)it will backup android boot.img to cust partition.
 - Download and flash this [Moded twrp recovery](https://mega.nz/file/czUjGI4Z#mrzauyw4Pa99bHfX16BD5NH9RUnxf3K9meYVn4EoFGo). through your installed recovery.
 - Flash boot-backup.zip, this will copy your android boot.img to cust partition, so you can reboot back to android. [you can manually do this]
 - Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60` )
