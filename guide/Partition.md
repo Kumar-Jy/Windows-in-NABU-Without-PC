@@ -11,7 +11,7 @@
 ### ${\color{red}[WARNING]}$
 > - _This project is at it's experiment stage, use it at your own risk._
 > - _All your data will be erased ! Back up now if needed._
-> - _Backup Important Partition (Boot, EFS, Modem and Persist) and copy it to outside phone memory_
+> - _Backup Important Partition (Boot, EFS, Modem and Persist) and save it to cloud drive/outside phone memory_
 > - _Do not flash/run the same file/command twice unless specified._
 > - _Follow step by step guide, don't jump or skip any step._
 > - _YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS/FILE BELOW IF YOU DO THEM WRONG!!!_
@@ -26,7 +26,7 @@
 - Now press `QUICK BOOT TO WINDOWS` and your device will boot into moded twrp recovery.
 - Flash boot-backup.zip, this will copy your android boot.img to cust partition, so you can reboot back to android. [you can manually do this]
 - Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60` )
-- When finished, flash boot.img from `cust` and reboot to system. (If it booted to MIUI recovery just select factory reset and reboot)
+- When finished, flash boot.img from `cust` folder and reboot to system. (If it booted to MIUI recovery just select factory reset and reboot)
 - Now finish android setup.
 #
 ### [2nd Step - Installation](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/Installation.md#colordarkorange2ndspace-step---installation)
