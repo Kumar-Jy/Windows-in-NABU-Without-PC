@@ -9,6 +9,7 @@
 - [_your device must be rooted, if not follow this guide_](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
 #
 ### ${\color{red}[WARNING]}$
+> - _This project is at it's experiment stage, use it at your own risk._
 > - _All your data will be erased ! Back up now if needed._
 > - _Backup Important Partition (Boot, EFS, Modem and Persist) and copy it to outside phone memory_
 > - _Do not flash/run the same file/command twice unless specified._
