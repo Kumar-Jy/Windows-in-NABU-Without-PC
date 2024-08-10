@@ -24,19 +24,22 @@
 #
 
 ### **${\color{darkorange}1st\space Step - Partitioning}$**
-${\color{yellow}[Note]}$ :- If your rom not supported custom recovery or if you have not install any custome recovery, do follow this [partitioning guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/Partition.md)
-- Download and flash this [Moded twrp recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery).
+- Open android file manager, Creat a new folder and rename it to `UEFI`
+- Download [Moded twrp recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery) and place it to `UEFI` folder.
+- Download and Install [Woa Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), open it, allow root permission, then click on `BACKUP BOOT` and select `ANDROID`.
+- Now press `QUICK BOOT TO WINDOWS` and your device will boot into moded twrp recovery.
+- Mount `cust` partition and copy *boot.img* from /sdcard to /cust folder
 - Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60` )
-- When finished, reboot to system, if it failed to boot , reboot back to recovery and format userdata then reboot.
+- When finished, flash boot.img from `cust` folder to boot partition and reboot to system. (If it booted to MIUI recovery just select factory reset and reboot)
 - Now finish android setup.
 #
 
 ### ${\color{darkorange}2nd\space Step - Installation}$
 - Download [WinInstaller.zip](https://mega.nz/file/9mFiWSIL#2Kmy_Zg1nh0OvR1wId9my6LYFSXtzv-IAGzHz4ogrt8).
 - Download and Install [WOA helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), allow root permission - click on `MOUNT WINDOWS` then click on `BACKUP BOOT IMAGE` and select `WNINDOWS` and `ANDROID` on by one.
-- reboot back to moded twrp recovery if u have already installed or repeat [Step 1 to 4](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/Partition.md#colordarkorange1stspace-step---partitioning) from Partition guide.
+- reboot back to moded twrp recovery by following *Step 1 to 4* from *partitioning* guide.
 - Now your device will boot in moded twrp recovery.
-- Select Wininstaller and flash it.
+- Select Wininstaller.zip and flash it.
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times.,)
 - For switch to android, double click on Sta.exe from desktop.
 > ${\color{yellow}[Note]}$ :- If it failed to boot in windows, it's means your android rom/kernel not supported windows, change it to stock HyperOS ther try.
