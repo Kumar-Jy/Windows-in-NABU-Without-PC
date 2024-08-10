@@ -12,9 +12,9 @@
 ## ${\color{darkorange}Get\space started}$
 - [_Installation Instructions_](guide/Installation.md)
 
-- [_Update Drivers_]()
+- ~[_Update Drivers_]()~
   
-- [_Troubleshooting_]()
+- ~[_Troubleshooting_]()~
 #
 ## ${\color{darkorange}Miscellaneous}$
 - [_Project Status_]()
