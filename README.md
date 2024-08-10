@@ -2,7 +2,7 @@
 
 <img align="right" src="/guide/nabu.png" width="450" alt="Windows installation on NABU">
 
-[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinInstaller)
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/nabuwoa)
 
 ## ⚠️ ${\color{red}Warning}$
 - _We're not responsible for any damage. Do it on your own risk._
