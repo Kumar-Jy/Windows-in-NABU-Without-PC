@@ -32,7 +32,7 @@ ${\color{yellow}[Note]}$ :- If your rom not supported custom recovery or if you 
 ### ${\color{darkorange}2nd\space Step - Installation}$
 - Download [WinInstaller.zip](https://mega.nz/file/9mFiWSIL#2Kmy_Zg1nh0OvR1wId9my6LYFSXtzv-IAGzHz4ogrt8).
 - Download and Install [WOA helper app](https://), allow root permission - click on `MOUNT WINDOWS` then click on `BACKUP BOOT IMAGE` and select `WNINDOWS` and `ANDROID` on by one.
-- reboot back to moded twrp recovery if u have already installed or repeat [Step 1 to 4](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/edit/main/guide/Installation.md#colordarkorange1stspace-step---partitioning) from Partition guide.
+- reboot back to moded twrp recovery if u have already installed or repeat [Step 1 to 4](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/Partition.md#colordarkorange1stspace-step---partitioning) from Partition guide.
 - Now your device will boot in moded twrp recovery.
 - Select Wininstaller and flash it.
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times.,)
