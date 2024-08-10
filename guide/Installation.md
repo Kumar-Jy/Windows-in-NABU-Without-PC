@@ -23,7 +23,7 @@
 
 ### **${\color{darkorange}1st\space Step - Partitioning}$**
 ${\color{yellow}[Note]}$ :- If your rom not supported custom recovery or if you have not install any custome recovery, do follow this [partitioning guide](partition.md)
-- Download and flash this [Moded twrp recovery](https://mega.nz/file/czUjGI4Z#mrzauyw4Pa99bHfX16BD5NH9RUnxf3K9meYVn4EoFGo). through your installed recovery.
+- Download and flash this [Moded twrp recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery). through your installed recovery.
 - Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60` )
 - When finished, reboot to system, if it failed to boot , reboot back to recovery and format userdata then reboot.
 - Now finish android setup.
@@ -31,7 +31,7 @@ ${\color{yellow}[Note]}$ :- If your rom not supported custom recovery or if you 
 
 ### ${\color{darkorange}2nd\space Step - Installation}$
 - Download [WinInstaller.zip](https://mega.nz/file/9mFiWSIL#2Kmy_Zg1nh0OvR1wId9my6LYFSXtzv-IAGzHz4ogrt8).
-- Download and Install [WOA helper app](https://), allow root permission - click on `MOUNT WINDOWS` then click on `BACKUP BOOT IMAGE` and select `WNINDOWS` and `ANDROID` on by one.
+- Download and Install [WOA helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), allow root permission - click on `MOUNT WINDOWS` then click on `BACKUP BOOT IMAGE` and select `WNINDOWS` and `ANDROID` on by one.
 - reboot back to moded twrp recovery if u have already installed or repeat [Step 1 to 4](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/Partition.md#colordarkorange1stspace-step---partitioning) from Partition guide.
 - Now your device will boot in moded twrp recovery.
 - Select Wininstaller and flash it.
