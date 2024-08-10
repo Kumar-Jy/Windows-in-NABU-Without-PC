@@ -35,7 +35,7 @@
 #
 
 ### ${\color{darkorange}2nd\space Step - Installation}$
-- Download [WinInstaller.zip](https://mega.nz/file/9mFiWSIL#2Kmy_Zg1nh0OvR1wId9my6LYFSXtzv-IAGzHz4ogrt8).
+- Download [WinInstaller.zip](https://mega.nz/file/UnNXQY4C#iJ5pSNQrMtTfl7my9EXaWwA1wtUjP-8M3aY3s2OHR0Q).
 - Download and Install [WOA helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), allow root permission - click on `MOUNT WINDOWS` then click on `BACKUP BOOT IMAGE` and select `WNINDOWS` and `ANDROID` on by one.
 - reboot back to moded twrp recovery by following *Step 1 to 4* from *partitioning* guide.
 - Now your device will boot in moded twrp recovery.
