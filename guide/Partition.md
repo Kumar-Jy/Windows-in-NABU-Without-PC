@@ -1,7 +1,7 @@
 # Xiaomi Pad 5 Windows Installation [Without PC]
 <img align="right" src="nabu.png" width="400" alt="Windows 11 Running On A Xiaomi Pad 5">
 
-[![download](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/e0fF1_bKQYE)
+[![download](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/)
 ## ${\color{blue}Steps\space for\space Partitioning}$ 
 ### Prerequisites
 - _A Working Brain (most important of all)_
