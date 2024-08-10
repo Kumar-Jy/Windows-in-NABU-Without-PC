@@ -23,7 +23,7 @@
 #
 
 ### **${\color{darkorange}1st\space Step - Partitioning}$**
-${\color{yellow}[Note]}$ :- If your rom not supported custom recovery or if you have not install any custome recovery, do follow this [partitioning guide](partition.md)
+${\color{yellow}[Note]}$ :- If your rom not supported custom recovery or if you have not install any custome recovery, do follow this [partitioning guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/Partition.md)
 - Download and flash this [Moded twrp recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery).
 - Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60` )
 - When finished, reboot to system, if it failed to boot , reboot back to recovery and format userdata then reboot.
