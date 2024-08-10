@@ -14,12 +14,12 @@
 
 - ~[_Update Drivers_]()~
   
-- ~[_Troubleshooting_]()~
+- [_Troubleshooting_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/troubleshooting-en.md)
 #
 ## ${\color{darkorange}Miscellaneous}$
-- [_Project Status_]()
+- [_Project Status_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/status.md)
 
-- [_Additional Materials_]()
+- [_Additional Materials_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Additional-materials-en.md)
 
 - [_Uninstall Instructions_]()
 #
