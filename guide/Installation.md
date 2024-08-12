@@ -55,10 +55,10 @@
 - reboot to moded TWRP/OrangeFox recovery and flash it.
   
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
-  
-- Double click on Sta.exe from desktop, for switch to android from windows .
 
--  For booting into Windows from Android, Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
+- Double click on Sta.exe from desktop, for switch to android from windows .
+
+- For booting into Windows from Android, Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
 
 > ${\color{yellow}[Note]}$ :- If it failed to boot in windows, it means your android rom/kernel not supported windows, change it to stock HyperOS ther try.
 #
