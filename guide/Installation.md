@@ -29,23 +29,37 @@
 
 ### **${\color{darkorange}1st\space Step - Partitioning}$** 
 - Download [Moded OrangeFox recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery)
+  
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v27.0/Magisk-v27.0.apk)
-- Boot to your existing recovery and flash **Moded OrangeFox Recovery.img** on `Install Recovery Ramdisk` 
-- Flash Magisk Manager apk and reboot back to recovery
-- Now open ofox recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60` )
+  
+- Boot to your existing recovery - click on `Install` - click on `Install Image` - select _**Moded OrangeFox Recovery**_ - select `Install Recovery Ramdisk` and swip to flash.
+  
+- Now Flash Magisk Manager apk and reboot back to recovery.
+  
+- Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60`)
+  
 - Now reboot and finish android setup.
+  
 > Note :- If you are not familiar with Orangefox Recovery, you can use **Moded TWRP Recovery** as well.
 #
 
 ### **${\color{darkorange}2nd\space Step - Installation}$**
 - Download [Woa Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), install it and allow root permission.
+  
 - Download [WinInstaller.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
-- Download [Windows ESD Image](https://worproject.com/esd) and [nabu-drivers.zip](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/tag/Drivers) and place it to `Download` folder
-- rename nabu-drivers.zip file to `Driver.zip` (this is necessary else WinInstaller will not to detect it)
-- reboot to moded TWRP/OrangeFox recovery and flash it
-- Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times.,)
-- For switch to android from windows, double click on Sta.exe from desktop.
-  For switching from Android to Windows, Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
+  
+- Download [Windows ESD Image](https://worproject.com/esd) and [nabu-drivers.zip](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/tag/Drivers) (it must be in `Download` folder)
+  
+- Rename `nabu-drivers.zip` to `Driver.zip` (this is necessary else WinInstaller will not to detect it)
+  
+- reboot to moded TWRP/OrangeFox recovery and flash it.
+  
+- Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
+  
+- Double click on Sta.exe from desktop, for switch to android from windows .
+
+-  For booting into Windows from Android, Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
+
 > ${\color{yellow}[Note]}$ :- If it failed to boot in windows, it means your android rom/kernel not supported windows, change it to stock HyperOS ther try.
 #
 
