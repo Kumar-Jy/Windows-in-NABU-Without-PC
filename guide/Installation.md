@@ -60,6 +60,6 @@
 
 - For booting into Windows (from Android), Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
 
-> ${\color{yellow}[Note]}$ :- If it failed to boot in windows, it means your android rom/kernel not supported windows, change it to stock HyperOS ther try.
+> ${\color{yellow}[Note]}$ :- If it failed to boot, it means your android rom/firmware not support windows, change it to stock HyperOS ther try.
 #
 
