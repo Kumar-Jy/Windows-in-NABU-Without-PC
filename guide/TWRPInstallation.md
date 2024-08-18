@@ -28,17 +28,16 @@
   4. Now your Xiaomi Pad Booted into TWRP recovery
 
   #### Flashing TWRP (In-Active Slot)
-  - flash **dtbo_flasher.zip**
-  - Tap on reboot and select `Bootloader`
-  - Repeet the step 1 and 2. from above steps.
+  - flash **dtbo_flasher.zip**. (It will copy dtbo.img from active slot to in-active slot then reboot to bootloader)
+  - Repet the step 1 and 2. from above steps.
   - Type `fastboot set_active other`
   - Type `fastboot flash recovery  ` and select downloaded `twrp.img` file by tapping ``clip`` icon from the top right corner then press `enter`
-  - Now reboot and yoy are in TWRP recovery
+  - Now reboot and you are in TWRP recovery.
 
 > [!NOTE]
 > - To witch back into Android from TWRP recovery, must tap on inactive slot before rebooting.
 > - To boot into TWRP recovery from android rom, install boot control app from [this]() link and tap on inactive slot.
-
+###
   #### Flashing TWRP (Active Slot - only for HyperOS/MIUI Rom)
   - Flash `Mahiro Kernel.zip`
   - Goto `Advanced` -
@@ -48,5 +47,5 @@
   - Flash `Magisk Manager.apk`
   - Now reboot and ! enjoy
 
-##
+#
 
