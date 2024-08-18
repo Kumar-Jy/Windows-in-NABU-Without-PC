@@ -11,10 +11,10 @@
 #
 
 ## Setup and Prepration
-- Download and install [`Bugjaeger`]() and [`addaway`]() in you android device
-- Download [TWRP Recovery] in both the devices (Xiaomi Pad 5 and other Android phone)
-- Download [Mahiro Kernel] in your Xiaomi Pad 5 (if you are using HyperOS/MIUI rom)
-- Download [dtbo_flasher.zip]() (if you are using AOSP rom)
+- Download and install [`Bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) and [`addaway`](https://github.com/AdAway/AdAway/releases/download/v6.1.3/AdAway-6.1.3-20240706.apk) in your other android device
+- Download [TWRP Recovery](https://sourceforge.net/projects/xiaomi-pad-5/files/TWRP/) in both the devices (Xiaomi Pad 5 and other Android phone)
+- Download [Mahiro Kernel](https://github.com/utziacre/android_kernel_xiaomi_nabu/releases/tag/20240803) in your Xiaomi Pad 5 (if you are using HyperOS/MIUI rom)
+- Download [dtbo_flasher.zip](dtbo_flasher.zip) (if you are using AOSP rom)
 #  
 
 ## TWRP installation
@@ -28,7 +28,7 @@
   4. Now your Xiaomi Pad Booted into TWRP recovery
 
   #### Flashing TWRP (In-Active Slot)
-  - flash **dtbo_flasher.zip** (Optional if you are using HyperOS/MIUI rom)
+  - flash **dtbo_flasher.zip**
   - Tap on reboot and select `Bootloader`
   - Repeet the step 1 and 2. from above steps.
   - Type `fastboot set_active other`
