@@ -8,7 +8,7 @@
 ## Prerequisites
 - ```Unlocked bootloader``` - (If your bootloader is locked and you don't know how to unlock it, use [this](unlock-bootloader.md) guide)
 
-- `Installed Custom Recovery` - (If not installed, use [this]() guide)
+- `Installed Custom Recovery` - (If not installed, use [this](guide/TWRPInstallation.md) guide)
 
 -  ```Brain```
 #
