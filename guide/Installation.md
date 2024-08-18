@@ -32,9 +32,7 @@
   
 - Now Flash Magisk Manager apk and reboot back to recovery.
   
-- Open recovery terminal and type `restore` , then reboot back to recovery and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60`)
-
-- Open recovery terminal and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60`)
+- Open recovery terminal and type `restore` , then reboot back to recovery and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60`)
   
 - Now reboot and finish android setup.
   
