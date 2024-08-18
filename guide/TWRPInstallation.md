@@ -14,7 +14,7 @@
 - Download and install [`Bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) and [`addaway`](https://github.com/AdAway/AdAway/releases/download/v6.1.3/AdAway-6.1.3-20240706.apk) in your other android device
 - Download [TWRP Recovery](https://sourceforge.net/projects/xiaomi-pad-5/files/TWRP/) in both the devices (Xiaomi Pad 5 and other Android phone)
 - Download [Mahiro Kernel](https://github.com/utziacre/android_kernel_xiaomi_nabu/releases/tag/20240803) in your Xiaomi Pad 5 (if you are using HyperOS/MIUI rom)
-- Download [dtbo_flasher.zip](dtbo_flasher.zip) (if you are using AOSP rom)
+- Download [dtbo_flasher.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/dtbo_flasher.zip) (if you are using AOSP rom)
 #  
 
 ## TWRP installation
