@@ -1,14 +1,19 @@
-# Xiaomi Pad 5 Windows Installation [Without PC] (in-progress)
+# Xiaomi Pad 5 Windows Installation [Without PC]
 <img align="right" src="nabu.png" width="425" alt="Windows 11 Running On A Xiaomi Pad 5">
 
-- [![download](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/)
+- [![YouTube](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/)
 - [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinInstaller)
-## ${\color{blue}Installation\space steps}$ 
-- ${\color{darkorange}1st\space Step - Partitioning}$
-- ${\color{darkorange}2nd\space Step - Installation}$
 #
 
-### ${\color{red}[WARNING]}$
+## Prerequisites
+- ```Unlocked bootloader``` - (If your bootloader is locked and you don't know how to unlock it, use [this](unlock-bootloader.md) guide)
+
+- `Installed Custom Recovery` - (If not installed, use [this]() guide)
+
+-  ```Brain```
+#
+
+## ⚠️ Warning
 > - _This project at it's Initial Stage, use it at your own risk._
 > - _All your data will be erased ! Back up now if needed._
 > - _Backup Important Partition (Boot, EFS, Modem and Persist) and copy it to outside phone memory_
@@ -18,7 +23,7 @@
 > - _DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/WinInstaller)._
 #
 
-### **${\color{darkorange}1st\space Step - Partitioning}$** 
+## Partitioning Userdata 
 - Download [Moded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery)
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v27.0/Magisk-v27.0.apk)
@@ -33,10 +38,11 @@
   
 - Now reboot and finish android setup.
   
-> Note :- If it failed to boot in android and reboot to twrp, enter `partition` command again and reboot.
+> [!NOTE]
+> If it failed to boot in android and reboot to twrp, enter `partition` command again and reboot.
 #
 
-### **${\color{darkorange}2nd\space Step - Installation}$**
+## Windows Installation
 - Download [`Woa Helper app`](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), install it and allow root permission.
   
 - Download [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
@@ -55,6 +61,7 @@
 
 - For booting into Windows (from Android), Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
 
-> ${\color{yellow}[Note]}$ :- If it failed to boot, it means your android rom/firmware is not supporting ntfs file system, change it to stock HyperOS and try.
+> [!NOTE]
+> If it failed to boot, it means your android rom/firmware is not supporting ntfs file system, change it to stock HyperOS and try.
 #
 
