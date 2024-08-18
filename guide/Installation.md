@@ -28,7 +28,7 @@
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v27.0/Magisk-v27.0.apk)
   
-- Boot into your existing recovery - click on `Install` - click on `Install Image` from bottom right corner - select _**Moded TWRP Recovery**_ from Download folder - select `Install Recovery Ramdisk` and swip to flash.
+- Boot into your existing recovery - goto `Advanced` - click on `Install Recovery Ramdisk` from bottom list - select _**Moded TWRP Recovery**_ from Download folder and swip to flash it.
   
 - Now Flash Magisk Manager apk and reboot back to recovery.
   
