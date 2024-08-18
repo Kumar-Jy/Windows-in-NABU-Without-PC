@@ -36,7 +36,7 @@
 
 > [!NOTE]
 > - To witch back into Android from TWRP recovery, must tap on inactive slot before rebooting.
-> - To boot into TWRP recovery from android rom, install boot control app from [this]() link and tap on inactive slot.
+> - To boot into TWRP recovery from android rom, install boot control app from [this](https://github.com/capntrips/BootControl/releases) link and tap on inactive slot.
 ###
   #### Flashing TWRP (Active Slot - only for HyperOS/MIUI Rom)
   - Flash `Mahiro Kernel.zip`
