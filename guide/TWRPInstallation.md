@@ -1,7 +1,7 @@
 # Xiaomi Pad 5 TWRP Installation [Without PC]
 <img align="right" src="nabu.png" width="400" alt="Windows 11 Running On a Xiaomi Pad 5">
 
-[![download](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/)
+[![download](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/91ZdM7HfRdc)
 ## ${\color{darkorange}Steps\space for\space Partitioning}$ 
 ### Prerequisites
 - _A Working Brain (most important of all)_
