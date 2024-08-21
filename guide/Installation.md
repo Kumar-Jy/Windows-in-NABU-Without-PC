@@ -38,7 +38,7 @@
 - Now reboot and finish android setup.
   
 > [!NOTE]
-> If it failed to boot in android and reboot to twrp, enter `partition` command again and reboot.
+> If it failed to boot in android and back to twrp, enter `partition` command again and reboot.
 #
 
 ## Windows Installation
@@ -48,11 +48,13 @@
   
 - Download [`ARM Windows ESD`](https://worproject.com/esd) (Select - Version:  `11` Build:  `22631.2861` Architecture:  `ARM64` Edition:  `CLIENT` Language:  `select your language`)
 
-- Download [```nabu-drivers```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/tag/Drivers) (both, Windows ESD and Driver must be in the `Download` folder)
+- Download [```nabu-drivers```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/tag/Drivers)
   
-- Rename `nabu-drivers.zip` to `Driver.zip` .
+- Rename `nabu-drivers.zip` to `Driver.zip` (letter **D** must be in capital letter)
+
+- Both the file should be in the default `Download` folder of your Xiaomi Pad 5.
   
-- reboot to moded TWRP/OrangeFox recovery and flash it.
+- Reboot to moded TWRP/OrangeFox recovery and flash it.
   
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
 
@@ -61,6 +63,8 @@
 - For booting into Windows (from Android), Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
 
 > [!NOTE]
+> TWRP should be permanently install in your pad 5.
+> Do not jus boot into it by using fastboot command `fastboot boot twrp` and flash 
 > If it failed to boot, it means your android rom/firmware is not supporting ntfs file system, change it to stock HyperOS and try.
 #
 
