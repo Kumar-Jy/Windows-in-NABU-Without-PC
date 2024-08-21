@@ -70,7 +70,7 @@
 
 ## Troubleshooting
 > By any chance if it failed to boot into windows, do following steps :-
-> - reboot to fastboot and flash your android boot.img .
-> - You can just reboot into TWRP by using command `fastboot boot /twrp path` and restore boot.img from `/sdcard/backup` folder
+> - reboot to fastboot and flash your android boot.img `fastboot flash boot_ab /path/to/boot.img`
+> - You can just reboot into TWRP by using command `fastboot boot /path/to/twrp.img` and restore boot.img from `/sdcard/backup` folder
 > - If you are using aosp rom and your twrp installed in secondery partition , type fastboot command `fastboot set_active other` and your android will be back.
 > - You can use [`bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) / app to enter all these command for troubleshooting.
