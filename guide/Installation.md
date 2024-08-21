@@ -68,3 +68,8 @@
 > If it failed to boot, it means your android rom/firmware is not supporting ntfs file system, change it to stock HyperOS and try.
 #
 
+## Troubleshooting
+. By any chance if it failed to boot in windows, reboot to fastboot and flash your android boot.img .
+- You can just reboot into TWRP by using command `fastboot boot /twrp path` and restore boot.img from `/sdcard/backup` folder
+- If you are using aosp rom and your twrp installed in secondery partition , type fastboot command `fastboot set_active other` and your android will be back.
+- You can use [`bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) / app to enter all these command for troubleshooting.
