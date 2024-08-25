@@ -51,16 +51,16 @@
 - Reboot to moded TWRP Recovery and flash it.
   
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
+
+> [!NOTE]
+> You can just boot into twrp and flash/sideload WinInstaller, but it may cause installation error in some custom rom, so better to install twrp permanently.
 #
 
 ## Dual-Boot setup
   
 - Double click on `Android` icon from desktop, to switch in android (from windows) .
 
-- For booting into Windows (from Android), Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
-
-> [!NOTE]
-> You can just boot into twrp and flash/sideload WinInstaller, but it may cause installation error in some custom rom, so better to install twrp permanently.
+- For booting into Windows (from Android), Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
 #
 
 ## Troubleshooting
