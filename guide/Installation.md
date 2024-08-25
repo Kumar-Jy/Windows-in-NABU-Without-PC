@@ -41,26 +41,22 @@
 > If it failed to boot in android and back to twrp, enter `partition` command again and reboot.
 #
 
-## Windows Installation
+## Windows Installation
+
 - Download [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
 - Download [`ARM Windows ESD`](https://worproject.com/esd) (Select - Version:  `11` Build:  `22631.2861` Architecture:  `ARM64` Edition:  `CLIENT` Language:  `select your language`)
-
+
+
 - ESD file should be in the default `Download` folder of your Xiaomi Pad 5.
   
 - Reboot to moded TWRP Recovery and flash it.
   
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
-
-> [!NOTE]
-> You can just boot into twrp and flash/sideload WinInstaller, but it may cause installation error in some custom rom, so better to install twrp permanently.
-#
-
-## Dual-Boot setup
   
 - Double click on `Android` icon from desktop, to switch in android (from windows) .
 
-- For booting into Windows (from Android), Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
+- For booting into Windows (from Android), Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
 #
 
 ## Troubleshooting
