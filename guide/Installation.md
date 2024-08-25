@@ -41,36 +41,38 @@
 > If it failed to boot in android and back to twrp, enter `partition` command again and reboot.
 #
 
-## Windows Installation
-- Download [`Woa Helper app`](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), install it and allow root permission.
-  
+## Windows Installation
 - Download [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
 - Download [`ARM Windows ESD`](https://worproject.com/esd) (Select - Version:  `11` Build:  `22631.2861` Architecture:  `ARM64` Edition:  `CLIENT` Language:  `select your language`)
-
-- Download [```nabu-drivers```](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/tag/Drivers)
-  
-- Rename `nabu-drivers.zip` to `Driver.zip` (letter **D** must be in capital letter)
-
-- Both the file should be in the default `Download` folder of your Xiaomi Pad 5.
+
+- ESD file should be in the default `Download` folder of your Xiaomi Pad 5.
   
 - Reboot to moded TWRP/OrangeFox recovery and flash it.
   
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
+#
 
-- Double click on `Android` from desktop, for switching into android (from windows) .
+## Dual-Boot setup
+  
+- Double click on `Android` icon from desktop, to switch in android (from windows) .
 
 - For booting into Windows (from Android), Open Woa-Helper app and press `QUICK BOOT TO WINDOWS`
 
-> [!NOTE]
-> TWRP should be permanently install in your pad 5.
-> Do not jus boot into it by using fastboot command `fastboot boot twrp` and flash 
-> If it failed to boot, it means your android rom/firmware is not supporting ntfs file system, change it to stock HyperOS and try.
+> [!NOTE]
+> You can just boot into twrp and flash/sideload WinInstaller, but it may cause installation error in some custom rom, so better to install twrp permanently.
 #
 
 ## Troubleshooting
+> If after clicking on android icon from Windows desktop , it is booting into twrp terminal, do the following setups :-
+> - (this error generally occurs if you are using custom rom and flashed WinInstaller from inactive paerition)
+ > - switch slot in twrp reboot section and reboot to system.
+> - Open Woa-Helper app - allow root permission - click on `MOUNT WINDOWS PARTITION` - now click on `backup boot partition` and select `Windows` 
+
 > By any chance if it failed to boot into windows, do following steps :-
 > - reboot to fastboot and flash your android boot.img `fastboot flash boot_ab /path/to/boot.img`
 > - You can just reboot into TWRP by using command `fastboot boot /path/to/twrp.img` and restore boot.img from `/sdcard/backup` folder
+
 > - If you are using aosp rom and your twrp installed in secondery partition , type fastboot command `fastboot set_active other` and your android will be back.
+
 > - You can use [`bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) / app to enter all these command for troubleshooting.
