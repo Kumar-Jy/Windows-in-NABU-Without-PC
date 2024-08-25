@@ -64,7 +64,7 @@
 #
 
 ## Troubleshooting
- > #### If after clicking on android icon from Windows desktop , if it is booting into twrp terminal, do the following setups :-
+ > #### If after clicking on android icon from Windows desktop , if it is booting into twrp recovery, do the following setups :-
 > - (this error generally occurs if you are using custom rom and flashed WinInstaller from inactive paerition)
  > - switch slot in twrp reboot section and reboot to system.
 > - Open Woa-Helper app - allow root permission - click on `MOUNT WINDOWS PARTITION` - now click on `backup boot partition` and select `Windows` 
