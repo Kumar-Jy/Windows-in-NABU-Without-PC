@@ -48,7 +48,7 @@
 
 - ESD file should be in the default `Download` folder of your Xiaomi Pad 5.
   
-- Reboot to moded TWRP/OrangeFox recovery and flash it.
+- Reboot to moded TWRP Recovery and flash it.
   
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
 #
@@ -64,12 +64,12 @@
 #
 
 ## Troubleshooting
-> If after clicking on android icon from Windows desktop , it is booting into twrp terminal, do the following setups :-
+#### If after clicking on android icon from Windows desktop , it is booting into twrp terminal, do the following setups :-
 > - (this error generally occurs if you are using custom rom and flashed WinInstaller from inactive paerition)
  > - switch slot in twrp reboot section and reboot to system.
 > - Open Woa-Helper app - allow root permission - click on `MOUNT WINDOWS PARTITION` - now click on `backup boot partition` and select `Windows` 
 
-> By any chance if it failed to boot into windows, do following steps :-
+#### By any chance if it failed to boot into windows, do following steps :-
 > - reboot to fastboot and flash your android boot.img `fastboot flash boot_ab /path/to/boot.img`
 > - You can just reboot into TWRP by using command `fastboot boot /path/to/twrp.img` and restore boot.img from `/sdcard/backup` folder
 
