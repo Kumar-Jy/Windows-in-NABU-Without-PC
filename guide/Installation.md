@@ -56,7 +56,7 @@
   
 - Double click on `Android` icon from desktop, to switch in android (from windows) .
 
-- For booting into Windows (from Android), Download and Open [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA) app and press `QUICK BOOT TO WINDOWS`
+- For booting into Windows (from Android), Download and Open [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA) app, allow root permission and press `QUICK BOOT TO WINDOWS`
 #
 
 ## Troubleshooting
