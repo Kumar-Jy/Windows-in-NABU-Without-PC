@@ -49,7 +49,7 @@
 
 - ESD file should be in the default `Download` folder of your Xiaomi Pad 5.
   
-- Reboot to moded TWRP Recovery and flash it.
+- Reboot to moded TWRP Recovery and flash WinInstaller.zip.
   
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
   
