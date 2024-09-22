@@ -12,7 +12,9 @@
 ## ${\color{darkorange}Get\space started}$
 - [_Installation Instructions_](guide/Installation.md)
 
-- ~[_Update Drivers_]()~
+- [_Update Drivers_](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/NabuDriverUpdater)
+
+- [_Re-Installation_](guide/Re-Installation.md)
   
 - [_Troubleshooting_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/troubleshooting-en.md)
 #
