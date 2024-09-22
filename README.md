@@ -12,7 +12,7 @@
 ## ${\color{darkorange}Get\space started}$
 - [_Installation Instructions_](guide/Installation.md)
 
-- [_Update Drivers_](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/NabuDriverUpdater)
+- [_Update Drivers_](guide/DriverUpdate.md)
 
 - [_Re-Installation_](guide/Re-Installation.md)
   
