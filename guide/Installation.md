@@ -28,17 +28,16 @@
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v27.0/Magisk-v27.0.apk)
   
-- Boot into your existing recovery - goto `Advanced` - click on `Install Recovery Ramdisk` from bottom list - select _**Moded TWRP Recovery**_ from Download folder and swip to flash it.
+- Boot into _**Moded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guid](  ) .
   
-- Now Flash Magisk Manager apk and reboot back to recovery.
-  
-- Open recovery terminal and type `restore` , then reboot back to recovery and type `partition $` (replace $ with Windows partition size in GB you want, like `partition 60`)
+- Now Flash Magisk Manager then go to advance - terminal and type `restore` then reboot back to moded twrp.
 
-  
-- Now reboot and finish android setup.
+- Now go to terminal and type `partition $$` (replace `$$` with Windows partition size in GB you want, like `partition 60`)
+ 
+- Reboot to system and complete Android and magisk setup.
   
 > [!NOTE]
-> If it failed to boot in android and back to twrp, enter `partition` command again and reboot.
+> If it failed to boot into android and back to recovery, enter `partition` command again and reboot.
 #
 
 ## Windows Installation
