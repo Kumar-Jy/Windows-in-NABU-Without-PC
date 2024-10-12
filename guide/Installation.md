@@ -6,7 +6,7 @@
 #
 
 ## Prerequisites
-- ```Unlocked bootloader``` - (If not unlocked, Use [this](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md) guide)
+- ```Unlocked bootloader``` - (If not unlocked, Use [this](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide)
 
 - `Installed Custom Recovery` - (If not installed, use [this](TWRPInstallation.md) guide)
 
