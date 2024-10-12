@@ -6,11 +6,11 @@
 #
 
 ## Prerequisites
-- ```Unlocked bootloader``` - (If your bootloader is locked and you don't know how to unlock it, use [this](unlock-bootloader.md) guide)
+- ```Unlocked bootloader``` - (If not unlocked, Use [this](unlock-bootloader.md) guide)
 
 - `Installed Custom Recovery` - (If not installed, use [this](TWRPInstallation.md) guide)
 
--  ```Brain```
+-  ```A Working Brain```
 #
 
 ## ⚠️ Warning
@@ -23,26 +23,24 @@
 > - _DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/WinInstaller)._
 #
 
-## Partitioning Userdata 
-- Download [Moded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery)
+## _1st Step_ - Partitioning Userdata
+- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
-- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v27.0/Magisk-v27.0.apk)
+- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v28.0/app-release.apk)
   
-- Boot into _**Moded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guid](  ) .
-  
-- Now Flash Magisk Manager then go to advance - terminal and type `restore` then reboot back to moded twrp.
+- Boot into _**Modded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guid](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) .
 
 - Now go to terminal and type `partition $$` (replace `$$` with Windows partition size in GB you want, like `partition 60`)
  
 - Reboot to system and complete Android and magisk setup.
   
 > [!NOTE]
-> If it failed to boot into android and back to recovery, enter `partition` command again and reboot.
+> If it failed to boot into android and back to TWRP, Open recovery terminal and type `formatdata` then reboot.
 #
 
-## Windows Installation
+## _2nd Step_ - Windows Installation
 
-- Download [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
+- Download latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
 - Download [`ARM Windows ESD`](https://worproject.com/esd) (Select - Version:  `11` Build:  `22631.2861` Architecture:  `ARM64` Edition:  `CLIENT` Language:  `select your language`)
 
