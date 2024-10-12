@@ -5,9 +5,9 @@
 ## ${\color{darkorange}Steps\space for\space Partitioning}$ 
 ### Prerequisites
 - _A Working Brain (most important of all)_
-- [_Bootloader must be unlocked, if not, please follow this guide._](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
+- _Bootloader must be unlocked, if not, follow this_ [guide.](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
 - Another Android device with OTG cable
-- [`TWRP Recovery`]()
+- [`TWRP Recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
 #
 
 ## Setup and Prepration
