@@ -40,7 +40,7 @@
 
 ## _2nd Step_ - Windows Installation
 
-- Download latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/WinInstaller/releases/download/NABU_WinInstaller/Nabu_WinInstaller_R4.zip).
+- Download latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
 - Download [`ARM Windows ESD`](https://worproject.com/esd) (Select - Version:  `11` Build:  `22631.2861` Architecture:  `ARM64` Edition:  `CLIENT` Language:  `select your language`)
 
