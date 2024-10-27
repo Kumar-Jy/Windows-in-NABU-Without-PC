@@ -26,7 +26,7 @@
 ## _1st Step_ - Partitioning Userdata
 - Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
-- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v28.0/app-release.apk)
+- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v28.0/Magisk-v28.0.apk)
   
 - Boot into _**Modded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guid](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) .
 
