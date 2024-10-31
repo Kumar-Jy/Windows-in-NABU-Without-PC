@@ -7,14 +7,14 @@
 ## Prerequisites
 - [`Moded TWRP recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery)
   
-- [`DU-Nabu-WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/NabuDriverUpdater).
+- [`Nabu-WinInstaller.zip`](https://github.com/Kumar-Jy/WinInstaller/releases/download/NABU_WinInstaller/Nabu_WinInstaller_R4.zip).
   
 
 ## Driver Update
 
-- Reboot to [`moded TWRP Recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery).
+- Reboot to modded TWRP Recovery.
   
-- Flash [`DU-Nabu-WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/NabuDriverUpdater) and Wait till all process completed and Windows setup appear. (It will take longer time to remove older drivers and update new)
+- Flash Nabu-WinInstaller.zip and Wait till all process complete and tab automatically reboot. (It takes longer time to remove older drivers and update new)
 #
 ## Dualboot
   
