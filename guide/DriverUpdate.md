@@ -1,24 +1,23 @@
-# Xiaomi Pad 5 Driver Update [Without PC]
+# Обновление драйвера Xiaomi Pad 5 [без ПК]
 <img align="right" src="nabu.png" width="300" alt="Windows 11 Running On A Xiaomi Pad 5">
 
 - [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinInstaller)
 #
 
-## Prerequisites
-- [`Moded TWRP recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery)
+## Предварительные требования
+- [`Модифицированное TWRP recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery)
   
 - [`Nabu-WinInstaller.zip`](https://github.com/Kumar-Jy/WinInstaller/releases/download/NABU_WinInstaller/Nabu_WinInstaller_R4.zip).
   
 
-## Driver Update
+## Обновление драйверов
 
-- Reboot to modded TWRP Recovery.
+- Перезагрузка в модифицированное TWRP recovery.
   
-- Flash Nabu-WinInstaller.zip and Wait till all process complete and tab automatically reboot. (It takes longer time to remove older drivers and update new)
+- Запустите Nabu-WinInstaller.zip и дождитесь завершения всех процессов, после чего автоматически перезагрузитесь. (Удаление старых драйверов и обновление новых занимает больше времени)
 #
-## Dualboot
+## Двойная загрузка
   
-- Double click on `Android` icon from windows desktop, to switch back in android (from windows) .
+- Дважды щелкните значок `Android` на рабочем столе Windows, чтобы вернуться в Android (из Windows).
 
-- For booting into Windows (from Android), Download and Open [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA) app, allow root permission and press `QUICK BOOT TO WINDOWS`
-#
+— Для загрузки в Windows (с Android) скачайте и откройте приложение [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), предоставьте права суперпользователя и нажмите `БЫСТРАЯ ЗАГРУЗКА В WINDOWS`
