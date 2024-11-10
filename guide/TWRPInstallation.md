@@ -2,7 +2,7 @@
 <img align="right" src="nabu.png" width="400" alt="Windows 11 Running On a Xiaomi Pad 5">
 
 [![download](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/91ZdM7HfRdc)
-## ${\color{darkorange}Steps\space for\space Recovery\space Installation}$ 
+## Steps for Recovery Installation
 ### Prerequisites
 - _A Working Brain (most important of all)_
 - _Bootloader must be unlocked, if not, follow this_ [guide.](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
@@ -31,7 +31,7 @@
   - flash **dtbo_flasher.zip**. (It will copy dtbo.img from active slot to in-active slot then reboot to bootloader)
   - Repet the step 1 and 2. from above steps.
   - Type `fastboot set_active other`
-  - Type `fastboot flash recovery` and select downloaded `twrp.img` file by tapping ``clip`` icon from the top right corner then press `enter`
+  - Type `fastboot flash boot` and select downloaded `twrp.img` file by tapping ``clip`` icon from the top right corner then press `enter`
   - Now reboot and you are in TWRP recovery.
 
 > [!NOTE]
