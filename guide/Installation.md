@@ -6,7 +6,7 @@
 #
 
 ## Prerequisites
-- ```Unlocked bootloader``` - (If not unlocked, Use [this](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide)
+- ```Unlocked bootloader``` - (If not unlocked, Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide)
 
 - `Installed Custom Recovery` - (If not installed, use [this](TWRPInstallation.md) guide)
 
@@ -16,11 +16,11 @@
 ## ⚠️ Warning
 > - _This project at it's Initial Stage, use it at your own risk._
 > - _All your data will be erased ! Back up now if needed._
-> - _Backup Important Partition (Boot, EFS, Modem and Persist) and copy it to outside phone memory_
+> - _Backup Important Partition (Boot, EFS, Modem and Persist) and copy it to outside tab memory_
 > - _Do not flash/run the same file/command twice unless specified._
 > - _Follow step by step guide, don't jump or skip any step._
 > - _YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS/FILE BELOW IF YOU DO THEM WRONG!!!_
-> - _DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/WinInstaller)._
+> - _DO NOT REBOOT YOUR NABU! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/WinInstaller)._
 #
 
 ## _1st Step_ - Partitioning Userdata
@@ -28,7 +28,7 @@
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v28.0/Magisk-v28.0.apk)
   
-- Boot into _**Modded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guid](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) .
+- Boot into _**Modded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) .
 
 - Now go to terminal and type `partition $$` (replace `$$` with Windows partition size in GB you want, like `partition 60`)
  
@@ -47,7 +47,7 @@
 
 - ESD file should be in the default `Download` folder of your Xiaomi Pad 5.
   
-- Reboot to moded TWRP Recovery and flash WinInstaller.zip.
+- Reboot to moded TWRP Recovery and flash `WinInstaller.zip`.
   
 - Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
   
@@ -57,7 +57,7 @@
 #
 
 ## Troubleshooting
-#### aAfter clicking on android icon from Windows desktop , if it is booting into twrp recovery :-
+#### After clicking on android icon from Windows desktop , if it is booting into twrp recovery :-
 > - (this error generally occurs if you are using custom rom and flashed WinInstaller from inactive partition)
 > - switch slot in twrp reboot section and reboot to system.
 > - Open Woa-Helper app - allow root permission - click on `MOUNT WINDOWS PARTITION` - now click on `backup boot partition` and select `Windows` 
@@ -66,4 +66,6 @@
 > - reboot to fastboot and flash your android boot.img `fastboot flash boot_ab /path/to/boot.img`
 > - You can just reboot into TWRP by using command `fastboot boot /path/to/twrp.img` and restore boot.img from `/sdcard/backup` folder
 > - If you are using aosp rom and your twrp installed in secondery partition , type fastboot command `fastboot set_active other` and your android will be back.
-> - You can use [`bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) / app to enter all these command for troubleshooting.
+
+> [!TIP]
+> You can use [`Nabu Fastboot Tool`](https://arkt-7.github.io/nabu/) to enter all these command for troubleshooting.
