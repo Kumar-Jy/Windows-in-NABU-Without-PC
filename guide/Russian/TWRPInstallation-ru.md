@@ -1,5 +1,5 @@
 # Установка TWRP на Xiaomi Pad 5 [без ПК]
-<img align="right" src="nabu.png" width="400" alt="Windows 11 Running On a Xiaomi Pad 5">
+<img align="right" src="/guide/nabu.png" width="400" alt="Windows 11 Running On a Xiaomi Pad 5">
 
 [![скачать](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/91ZdM7HfRdc)
 ## ${\color{darkorange}Steps\space for\space Recovery\space Installation}$ 
