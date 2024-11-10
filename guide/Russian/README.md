@@ -6,7 +6,7 @@
 
 
 ## Язык
-**```Русский```** |  [```English```](/guide/README.md) |
+**```Русский```** |  [```English```](https://github.com/Misha803/Windows-in-NABU-Without-PC/blob/main/README.md) |
 
 
 ## ⚠️ Предупреждение
