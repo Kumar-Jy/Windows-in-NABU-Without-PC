@@ -28,7 +28,7 @@
   
 - Скачайте [Magisk Manager](https://github.com/topjohnwu/Magisk/releases/download/v28.0/Magisk-v28.0.apk)
   
-- Загрузитесь в _**модифицированный TWRP recovery**_ (либо с помощью команды fastboot, либо вы можете установить его на постоянной основе, следуя [этой инструкции](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) .
+- Загрузитесь в _**модифицированный TWRP recovery**_ (либо с помощью команды fastboot, либо вы можете установить его на постоянной основе, следуя [этой инструкции](TWRPInstallation-ru.md) .
 
 - Теперь перейдите в терминал и введите `partition $$` (замените `$$` на нужный вам размер раздела Windows в гигабайтах, например `partition 60`)
  
