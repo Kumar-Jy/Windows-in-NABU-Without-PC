@@ -6,9 +6,9 @@
 #
 
 ## Предварительные условия
-- ```Разблокированный загрузчик``` - (Если он не разблокирован, воспользуйтесь [этим](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) руководством)
+- ```Разблокированный загрузчик``` - (Если он не разблокирован, воспользуйтесь [этим](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Russian/unlock-bootloader-ru.md) руководством)
 
-- `Установленный TWRP recovery` - (Если не установлено, воспользуйтесь [этим](TWRPInstallation.md) руководством)
+- `Установленный TWRP recovery` - (Если не установлено, воспользуйтесь [этим](TWRPInstallation-ru.md) руководством)
 
 -  ```Рабочий мозг```
 #
