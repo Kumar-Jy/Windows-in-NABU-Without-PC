@@ -4,6 +4,11 @@
 
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/nabuwoa)
 
+
+## Язык
+**```Русский```** |  [```English```](/guide/README.md) |
+
+
 ## ⚠️ Предупреждение
 - _Мы не несем ответственности за любой ущерб. Делайте это на свой страх и риск._
 - _Этот проект находится на ранней стадии, внимательно следуйте всем шагам._
