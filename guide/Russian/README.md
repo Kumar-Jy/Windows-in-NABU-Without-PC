@@ -10,11 +10,11 @@
 
 #
 ## Начало работы
-- [_Инструкции по установке_](guide/Russian/Installation-ru.md)
+- [_Инструкции по установке_](Installation-ru.md)
 
-- [_Обновление драйверов_](guide/Russian/DriverUpdate-ru.md)
+- [_Обновление драйверов_](DriverUpdate-ru.md)
 
-- [_Повторная установка_](guide/Russian/Re-Installation-ru.md)
+- [_Повторная установка_](Re-Installation-ru.md)
   
 - [_Устранение неполадок_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Russian/troubleshooting-ru.md)
 #
