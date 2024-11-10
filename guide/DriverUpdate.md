@@ -14,11 +14,11 @@
 
 - Reboot to modded TWRP Recovery.
   
-- Flash Nabu-WinInstaller.zip and Wait till all process complete and tab automatically reboot. (It takes longer time to remove older drivers and update new)
+- Flash **```Nabu-WinInstaller.zip```** and wait till all process complete and tab automatically reboot. (It takes longer time to remove older drivers and update new)
 #
 ## Dualboot
   
-- Double click on `Android` icon from windows desktop, to switch back in android (from windows) .
+- Double click on `Android` icon from windows desktop, to switch back in android (from windows).
 
-- For booting into Windows (from Android), Download and Open [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA) app, allow root permission and press `QUICK BOOT TO WINDOWS`
+- For booting into Windows (from Android), Download and Open [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA) app, allow root permission and press **`QUICK BOOT TO WINDOWS`**
 #
