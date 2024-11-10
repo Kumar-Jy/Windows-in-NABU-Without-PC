@@ -1,5 +1,5 @@
 # Обновление драйвера Xiaomi Pad 5 [без ПК]
-<img align="right" src="nabu.png" width="300" alt="Windows 11 Running On A Xiaomi Pad 5">
+<img align="right" src="/guide/nabu.png" width="300" alt="Windows 11 Running On A Xiaomi Pad 5">
 
 - [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinInstaller)
 #
