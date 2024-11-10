@@ -5,7 +5,7 @@
 ## ${\color{darkorange}Steps\space for\space Recovery\space Installation}$ 
 ### Prerequisites
 - _A Working Brain (most important of all)_
-- _Bootloader must be unlocked, if not, follow this_ [guide.](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
+- _Bootloader must be unlocked, if not, follow this_ [guide.](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
 - Another Android device with OTG cable
 - [`TWRP Recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
 #
@@ -31,7 +31,7 @@
   - flash **dtbo_flasher.zip**. (It will copy dtbo.img from active slot to in-active slot then reboot to bootloader)
   - Repet the step 1 and 2. from above steps.
   - Type `fastboot set_active other`
-  - Type `fastboot flash recovery  ` and select downloaded `twrp.img` file by tapping ``clip`` icon from the top right corner then press `enter`
+  - Type `fastboot flash recovery` and select downloaded `twrp.img` file by tapping ``clip`` icon from the top right corner then press `enter`
   - Now reboot and you are in TWRP recovery.
 
 > [!NOTE]
@@ -45,7 +45,7 @@
   - Select downloaded _**TWRP Recovery**_ from Download folder
   - Swip to flash it.
   - Flash `Magisk Manager.apk`
-  - Now reboot and ! enjoy
+  - Now reboot and enjoy!
 
 #
 
