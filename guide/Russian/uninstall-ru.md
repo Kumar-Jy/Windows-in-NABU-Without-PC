@@ -23,5 +23,5 @@
 - Снова загрузитесь в режиме восстановления и выберите «Очистить» > «Форматировать данные» > введите «да»
 - Перезагрузите систему
 #### [Способ -3]
-- следуйте [этому](https://github.com/n00b69/woa-beryllium/blob/main/guide/uninstall.md) руководству  
+- следуйте [этому](https://github.com/n00b69/woa-beryllium/blob/main/guide/Russian/uninstall-ru.md) руководству  
 ## Готово!

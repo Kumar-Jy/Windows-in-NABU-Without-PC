@@ -5,7 +5,7 @@
 ## ${\color{darkorange}Steps\space for\space Recovery\space Installation}$ 
 ### Предварительные требования
 - _Рабочий мозг (самое важное из всего)_
-- _Необходимо разблокировать загрузчик, если нет, следуйте этому_ [руководству.](https://github.com/Misha803/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Re-rooting-en.md)
+- _Необходимо разблокировать загрузчик, если нет, следуйте этому_ [руководству.](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Russian/Re-rooting-ru.md)
 - Другое устройство Android с OTG-кабелем
 - [`TWRP recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
 #
