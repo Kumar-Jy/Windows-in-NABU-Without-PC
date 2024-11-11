@@ -35,7 +35,7 @@
 - Reboot to system and complete Android and magisk setup.
   
 > [!NOTE]
-> If it failed to boot into android and back to TWRP, Open recovery terminal and type `formatdata` then reboot.
+> If it failed to boot into android and back to TWRP, then type `partition` command again and reboot.
 #
 
 ## _2nd Step_ - Windows Installation
