@@ -30,6 +30,8 @@
   
 - Boot into _**Modded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) .
 
+- Flash magisk.apk (if not already rooted)
+
 - Now go to terminal and type `partition $$` (replace `$$` with Windows partition size in GB you want, like `partition 60`)
  
 - Reboot to system and complete Android and magisk setup.
