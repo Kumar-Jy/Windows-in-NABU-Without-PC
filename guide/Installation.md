@@ -44,7 +44,7 @@
 
 - Download latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/WinInstaller/releases/download/NABU_WinInstaller/Nabu_WinInstaller_R4.zip).
   
-- Download [`ARM Windows ESD`](https://arkt-7.github.io/woawin/) [Do not use 24H2, it can break your device]
+- Download [`ARM Windows ESD`](https://arkt-7.github.io/woawin/)
 
 
 - ESD file should be in the default `Download` folder of your Xiaomi Pad 5.
