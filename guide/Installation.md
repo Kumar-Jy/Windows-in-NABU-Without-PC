@@ -24,7 +24,7 @@
 #
 
 ## _1st Step_ - Partitioning Userdata
-- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/modded-twrp.img)
+- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/TWRP-NABU.img)
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v28.0/Magisk-v28.0.apk)
   
@@ -42,7 +42,7 @@
 
 ## _2nd Step_ - Windows Installation
 
-- Download latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/WinInstaller/releases/download/NABU_WinInstaller/Nabu_WinInstaller_R4.zip).
+- Download latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller)
   
 - Download [`ARM Windows ESD`](https://arkt-7.github.io/woawin/)
 
