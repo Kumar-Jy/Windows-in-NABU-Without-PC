@@ -24,9 +24,9 @@
 #
 
 ## _1st Step_ - Partitioning Userdata
-- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/TWRP-NABU.img)
+- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery)
   
-- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases/download/v28.0/Magisk-v28.0.apk)
+- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases)
   
 - Boot into _**Modded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) .
 
@@ -45,7 +45,6 @@
 - Download latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller)
   
 - Download [`ARM Windows ESD`](https://arkt-7.github.io/woawin/)
-
 
 - ESD file should be in the default `Download` folder of your Xiaomi Pad 5.
   
