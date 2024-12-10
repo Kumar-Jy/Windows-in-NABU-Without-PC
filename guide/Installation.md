@@ -24,7 +24,7 @@
 #
 
 ## _1st Step_ - Partitioning Userdata
-- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery)
+- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases)
   
