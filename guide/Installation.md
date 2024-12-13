@@ -23,50 +23,69 @@
 > - _DO NOT REBOOT YOUR NABU! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/WinInstaller)._
 #
 
-## _1st Step_ - Partitioning Userdata
+---
+
+## Partitioning Userdata
 - Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases)
   
-- Boot into _**Modded TWRP Recovery**_ (either through fastboot command or you can permanently flash it using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) .
+- Boot into _**Modded TWRP Recovery**_ (either through the fastboot command or you can permanently flash it using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md)).
 
-- Flash magisk.apk (if not already rooted)
+- Flash magisk.apk (if not already rooted).
 
-- Now go to terminal and type `partition $$` (replace `$$` with Windows partition size in GB you want, like `partition 60`)
+- Now go to the terminal and type `partition $$` (replace `$$` with the Windows partition size in GB you want, like `partition 60`).
  
-- Reboot to system and complete Android and magisk setup.
+- Reboot to the system and complete the Android and Magisk setup.
   
 > [!NOTE]
-> If it failed to boot into android and back to TWRP, then type `partition` command again and reboot.
-#
+> If it fails to boot into Android and returns to TWRP, then type the `partition` command again and reboot.
 
-## _2nd Step_ - Windows Installation
+---
 
-- Download latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller)
-  
-- Download [`ARM Windows ESD`](https://arkt-7.github.io/woawin/)
+## Windows Installation
 
-- ESD file should be in the default `Download` folder of your Xiaomi Pad 5.
+- Download the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
-- Reboot to moded TWRP Recovery and flash `WinInstaller.zip`then reboot to system.
-  
-- Wait till all process completed and Windows setup appear. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times)
-  
-- Double click on `Android` icon from desktop, to switch in android (from windows) .
+- Download [`ARM Windows ESD`](https://arkt-7.github.io/woawin/).
 
-- For booting into Windows (from Android), Download and Open [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA) app, allow root permission and press `QUICK BOOT TO WINDOWS`
-#
+- Place the ESD file in the Download folder on your Xiaomi Pad 5 or in the WOA folder on a PENDRIVE. (Yes, now you can also flash it through PENDRIVE.)
+  
+- Reboot to the Modded TWRP Recovery and flash `WinInstaller.zip`, then reboot to the system.
+  
+- Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times.)
+
+---
+
+#### Dualboot Setup:
+- Double-click the `Android` icon on the desktop to switch to Android (from Windows).
+- To boot from Android to Windows, install the Woa-Helper.apk from the Download folder, allow root permissions, and press `QUICK BOOT TO WINDOWS`.
+
+#### Miscellaneous:
+- Locate `Toolbox.zip` in the `C:\` drive. It contains various useful files and folders.
+- To install Microsoft Office, connect to the internet and run `Office Tool Plus.exe` from the `office_tool` folder.
+- For AtlasOS, unzip and run `AMEWizard`, select `AtlasPlaybook.apbx`, and follow the instructions.
+- For Windows and Office activation, connect to the internet, unzip `Toolbox.zip` from the C:\ drive, and run `winactivator.bat` as an administrator.
+- You can also install miscellaneous frameworks from the `FRAMEWORK` folder.
+
+---
 
 ## Troubleshooting
-#### After clicking on android icon from Windows desktop , if it is booting into twrp recovery :-
-> - (this error generally occurs if you are using custom rom and flashed WinInstaller from inactive partition)
-> - switch slot in twrp reboot section and reboot to system.
-> - Open Woa-Helper app - allow root permission - click on `MOUNT WINDOWS PARTITION` - now click on `backup boot partition` and select `Windows` 
 
-#### By any chance if it failed to boot into windows, do following steps :-
-> - reboot to fastboot and flash your android boot.img `fastboot flash boot_ab /path/to/boot.img`
-> - You can just reboot into TWRP by using command `fastboot boot /path/to/twrp.img` and restore boot.img from `/sdcard/backup` folder
-> - If you are using aosp rom and your twrp installed in secondery partition , type fastboot command `fastboot set_active other` and your android will be back.
+#### After clicking on the Android icon from the Windows desktop, if it boots into TWRP recovery:
+> - (This error generally occurs if you are using a custom ROM and flashed WinInstaller from an inactive partition.)
+> - Switch slots in TWRP reboot section and reboot to the system.
+> - Open the Woa-Helper app, allow root permission, click on `MOUNT WINDOWS PARTITION`, then click on `backup boot partition` and select `Windows`.
+
+#### If it fails to boot into Windows, do the following steps:
+> - Reboot to fastboot and flash your Android boot.img: `fastboot flash boot_ab /path/to/boot.img`.
+> - You can just reboot into TWRP by using the command `fastboot boot /path/to/twrp.img` and restore boot.img from the `/sdcard/backup` folder.
+> - If you are using an AOSP ROM and TWRP is installed in the secondary partition, type the fastboot command `fastboot set_active other` and your Android will be back.
 
 > [!TIP]
-> You can use [`Nabu Fastboot Tool`](https://arkt-7.github.io/nabu/) to enter all these command for troubleshooting.
+> You can use [`Nabu Fastboot Tool`](https://arkt-7.github.io/nabu/) to enter all these commands for troubleshooting.
+> 
+> Locate the `backup` folder on your device's internal storage and save it to a safe place (such as Google Drive).
+
+---
+
