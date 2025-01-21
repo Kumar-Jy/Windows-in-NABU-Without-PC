@@ -59,7 +59,7 @@
 
 #### Dualboot Setup:
 - Double-click the `Android` icon on the desktop to switch to Android (from Windows).
-- To boot from Android to Windows, install the Woa-Helper.apk from the Download folder, allow root permissions, and press `QUICK BOOT TO WINDOWS`.
+- To boot from Android to Windows, install the [Woa-Helper.apk](https://github.com/n00b69/woa-helper/releases/tag/APK) from the Download folder, allow root permissions, and press `QUICK BOOT TO WINDOWS`.
 
 #### Miscellaneous:
 - Locate `Toolbox.zip` in the `C:\` drive. It contains various useful files and folders.
