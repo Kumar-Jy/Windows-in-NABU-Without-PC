@@ -11,10 +11,8 @@
 #
 
 ## Setup and Prepration
-- Download and install [`Bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) and [`addaway`](https://github.com/AdAway/AdAway/releases/download/v6.1.3/AdAway-6.1.3-20240706.apk) in your other android device
+- Download and install [`Bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) and [`addaway`](https://github.com/AdAway/AdAway/releases/download/v6.1.3/AdAway-6.1.3-20240706.apk) in your other android phone
 - Download [TWRP Recovery](https://sourceforge.net/projects/xiaomi-pad-5/files/TWRP/) in both the devices (Xiaomi Pad 5 and other Android phone)
-- Download [Mahiro Kernel](https://github.com/utziacre/android_kernel_xiaomi_nabu/releases/tag/20240803) in your Xiaomi Pad 5 (if you are using HyperOS/MIUI rom)
-- Download [dtbo.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/dtbo.img) (if you are using AOSP rom)
 #  
 
 <details>
@@ -27,10 +25,9 @@
 - Tap on blue icon from the bottom right corner
 - Type `fastboot boot` and select downloaded `twrp.img` file by tapping ``clip`` icon from the top right corner then press `enter`
 - Now your Xiaomi Pad Booted into TWRP recovery
-- Flash `Mahiro Kernel.zip`
 - Goto `Advanced` -
 - Click on `Install Recovery Ramdisk` from bottom list
-- Select downloaded _**TWRP Recovery**_ from Download folder
+- Select downloaded _**twrp.img**_ from Download folder
 - - Swip to flash it.
 - Flash `Magisk Manager.apk`
 - Now reboot and enjoy!
@@ -46,7 +43,6 @@
 - Reboot Xiaomi Pad 5 into fastboot mode by pressing power button and volume down
 - Connect OTG cable in both the devices
 - Type command `fastboot set_active other`
-- Flash **dtbo.img** `fastboot flash dtbo` and select downloaded `dtbo.img` file by tapping ``clip`` icon from the top right corner then press `enter`
 - Now flash **twrp.img** `fastboot flash boot` and select downloaded `twrp.img` file by tapping ``clip`` icon from the top right corner then press `enter`
 - Now reboot and you are in TWRP recovery.
 - To switch back into Android from TWRP recovery, must tap on inactive slot before rebooting.
