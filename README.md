@@ -60,12 +60,3 @@
 [<img alt="Kumar-Jy" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/20044626?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Kumar-Jy)
 
 ----
-## Support My Work
-
-#### If you find my projects helpful, consider supporting my work! Your contributions will help me keep developing and sharing useful resources.
-
-<p align="left">
-  <a href="https://www.buymeacoffee.com/kumarjy" target="_blank">
-    <img src="https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/blob/main/guide/buymecoffee.png" alt="Buy Me A Coffee" style="height: 60px !important; width: 217px !important;">
-  </a>
-</p>
