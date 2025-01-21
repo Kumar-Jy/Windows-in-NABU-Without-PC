@@ -24,9 +24,9 @@
 #
 
 ## _1-й шаг_ — разделение пользовательских данных
-- Скачайте [модифицированный TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/modded-twrp.img)
+- Скачайте [модифицированный TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
-- Скачайте [Magisk Manager](https://github.com/topjohnwu/Magisk/releases/download/v28.0/Magisk-v28.0.apk)
+- Скачайте [Magisk Manager](https://github.com/topjohnwu/Magisk/releases)
   
 - Загрузитесь в _**модифицированный TWRP recovery**_ (либо с помощью команды fastboot, либо вы можете установить его на постоянной основе, следуя [этой инструкции](TWRPInstallation-ru.md) .
 
@@ -40,9 +40,9 @@
 
 ## _2-й шаг_ — установка Windows
 
-- Скачайте последнюю версию [`WinInstaller.zip`](https://github.com/Kumar-Jy/WinInstaller/releases/download/NABU_WinInstaller/Nabu_WinInstaller_R4.zip).
+- Скачайте последнюю версию [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
-- Скачайте [`ARM Windows ESD`](https://arkt-7.github.io/woawin/) [Не используйте 24H2, это может привести к поломке вашего устройства]
+- Скачайте [`ARM Windows ESD`](https://arkt-7.github.io/woawin/)
 
 
 - "Поместите файл ESD в папку Загрузки на вашем Xiaomi Pad 5 или в папку `WOA` на флеш-накопителе. (Да, теперь вы также можете прошить его через флеш-накопитель.)"
@@ -53,7 +53,7 @@
   
 - Дважды щелкните значок `Android` на рабочем столе, чтобы переключиться на Android (из Windows).
 
-- Для загрузки в Windows (с Android) скачайте и откройте приложение [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), предоставьте права суперпользователя и нажмите `БЫСТРАЯ ЗАГРУЗКА В WINDOWS`
+- Для загрузки в Windows (с Android) скачайте и откройте приложение [Woa-Helper](https://github.com/n00b69/woa-helper/releases/tag/APK), предоставьте права суперпользователя и нажмите `БЫСТРАЯ ЗАГРУЗКА В WINDOWS`
 #
 
 ## Устранение неполадок
