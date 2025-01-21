@@ -20,4 +20,4 @@
   
 - Дважды щелкните значок `Android` на рабочем столе Windows, чтобы вернуться в Android (из Windows).
 
-— Для загрузки в Windows (с Android) скачайте и откройте приложение [Woa-Helper](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA), предоставьте права суперпользователя и нажмите **`БЫСТРАЯ ЗАГРУЗКА В WINDOWS`**
+— Для загрузки в Windows (с Android) скачайте и откройте приложение [Woa-Helper.apk](https://github.com/n00b69/woa-helper/releases/tag/APK), предоставьте права суперпользователя и нажмите **`БЫСТРАЯ ЗАГРУЗКА В WINDOWS`**
