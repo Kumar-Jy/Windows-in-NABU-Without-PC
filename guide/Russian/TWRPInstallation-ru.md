@@ -11,40 +11,37 @@
 #
 
 ## Настройка и подготовка
-— Скачайте и установите [`Bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) и [`addaway`](https://github.com/AdAway/AdAway/releases/download/v6.1.3/AdAway-6.1.3-20240706.apk) на другое ваше устройство Android
-- Загрузите [TWRP Recovery](https://sourceforge.net/projects/xiaomi-pad-5/files/TWRP/) на оба устройства (Xiaomi Pad 5 и другой телефон на Android)
- - Загрузите [ядро Mahiro](https://github.com/utziacre/android_kernel_xiaomi_nabu/releases/tag/20240803) на Xiaomi Pad 5 (если вы используете прошивку HyperOS/MIUI)
-- Скачайте [dtbo_flasher.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/dtbo_flasher.zip) (если вы используете прошивку AOSP)
+- Скачайте и установите [`Bugjaeger`](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) и [`addaway`](https://github.com/AdAway/AdAway/releases/download/v6.1.3/AdAway-6.1.3-20240706.apk) на другое ваше устройство Android
+- Загрузите [TWRP Recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) на оба устройства (Xiaomi Pad 5 и другой телефон на Android)
+- [Magisk Manager.apk](https://github.com/topjohnwu/magisk/releases)
 #  
 
-## Установка TWRP
-- Переведите Xiaomi Pad 5 в режим fastboot, нажав кнопку питания и кнопку уменьшения громкости
-- Подключите кабель OTG к обоим устройствам
-  
-  #### Откройте Bugjaeger 
-  1. Перейдите в меню **FASTBOOT**
-  2. Нажмите на синий значок в правом нижнем углу
-  3. Введите `fastboot boot` и выберите загруженный файл `twrp.img`, нажав на значок ``клип`` в правом верхнем углу, затем нажмите `enter`
-  4. Теперь ваш Xiaomi Pad загрузится в TWRP Recovery
+<details> <summary><strong>Нажмите здесь для HyperOS/MIUI Rom</strong></summary>
+ 
+### Установка TWRP в HyperOS/MIUI Rom
+- Перезагрузите Xiaomi Pad 5 в режим fastboot, удерживая кнопку питания и кнопку уменьшения громкости
+- Подключите OTG-кабель к обоим устройствам
+- Перейдите в меню **FASTBOOT**
+- Нажмите на синюю иконку в правом нижнем углу
+- Введите команду fastboot boot и выберите загруженный файл ``twrp.img``, нажав на иконку ``clip`` в правом верхнем углу, затем нажмите ``enter``
+- Теперь ваш Xiaomi Pad загрузился в режим восстановления TWRP
+- Перейдите в ``Advanced`` - Нажмите ``Install Recovery Ramdisk`` в нижнем списке
+- Выберите загруженный **twrp.img** из папки Download
+- Проведите для флешинга.
+- Установите [Magisk Manager.apk](https://github.com/topjohnwu/magisk/releases)
+- Теперь перезагрузитесь и наслаждайтесь!
+</details>
 
-  #### Прошивка TWRP (неактивный слот)
-  - прошейте **dtbo_flasher.zip**. (Файл dtbo.img будет скопирован из активного слота в неактивный, затем перезагрузится в загрузчик)
-  - Повторите шаги 1 и 2. из приведенных выше шагов.
-  - Введите `fastboot set_active other`
-  - Введите `fastboot flash boot` и выберите загруженный файл "twrp.img", нажав на значок "clip" в правом верхнем углу, затем нажмите "enter"
-  - Теперь перезагрузитесь, и вы перейдете в TWRP recovery.
+-----
 
-> [!ПРИМЕЧАНИЕ]
-> - Чтобы вернуться в Android из TWRP recovery, перед перезагрузкой необходимо нажать на неактивный слот.
-> - Чтобы загрузиться в TWRP recovery из Android-псевдонима, установите приложение Boot Control по [этой](https://github.com/capntrips/BootControl/releases) ссылке и нажмите на неактивный слот.
-###
-  #### Прошивка TWRP (активный слот — только для HyperOS/MIUI Rom)
-  - Прошейте `Mahiro Kernel.zip`
-  - Переходим к "Дополнительно" -
-  - Нажимаем "Установить Recovery Ramdisk" в нижнем списке
-  - Выбираем загруженный TWRP Recovery из папки загрузки
-  - Проводим пальцем, чтобы перепрошить его.
-  - Перепрошиваем `Magisk Manager.apk`
-  - Теперь перезагрузитесь и ! наслаждаться
+<details> <summary><strong>Нажмите здесь для AOSP Rom</strong></summary>
 
-#
+ ### Установка TWRP в AOSP Rom
+- Перезагрузите Xiaomi Pad 5 в режим fastboot, удерживая кнопку питания и кнопку уменьшения громкости
+- Подключите OTG-кабель к обоим устройствам
+- Введите команду ``fastboot set_active other``
+- Теперь флешьте ``twrp.img`` командой ``fastboot flash boot`` и выберите загруженный файл ``twrp.img``, нажав на иконку clip в правом верхнем углу, затем нажмите enter
+- Теперь перезагрузитесь, и вы окажетесь в режиме восстановления TWRP.
+- Чтобы вернуться в ``Android`` из режима восстановления TWRP, обязательно выберите неактивный слот перед перезагрузкой.
+- Чтобы загрузиться в TWRP из Android-рома, скачайте и установите приложение для управления загрузкой с [этого](https://github.com/capntrips/BootControl/releases) сайта и выберите неактивный слот.
+</details>
