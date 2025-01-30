@@ -49,9 +49,9 @@
   
 - Download normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/) or you can download [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk)
 
-- Place the ESD file in the Download folder on your Xiaomi Pad 5 or in the WOA folder on a PENDRIVE. (Yes, now you can also flash it through PENDRIVE.)
+- Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder in a PENDRIVE. (Yes, you can also install it using PENDRIVE.)
   
-- Reboot to the Modded TWRP Recovery and flash `WinInstaller.zip`, then reboot to the system.
+- Reboot to the Modded TWRP > Install > select WinInstaller.zip and swip to flash, then reboot to the system.
   
 - Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times.)
 
