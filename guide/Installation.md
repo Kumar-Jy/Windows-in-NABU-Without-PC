@@ -47,7 +47,7 @@
 
 - Download the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
-- Download [`ARM Windows ESD`](https://arkt-7.github.io/woawin/).
+- Download normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/) or you can download [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk)
 
 - Place the ESD file in the Download folder on your Xiaomi Pad 5 or in the WOA folder on a PENDRIVE. (Yes, now you can also flash it through PENDRIVE.)
   
