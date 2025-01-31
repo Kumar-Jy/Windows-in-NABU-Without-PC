@@ -9,15 +9,25 @@
 - [`Modified TWRP recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
 - [`Nabu WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
+
+- Download normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/) or you can download [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk)
+
   
 
 ## Re-Installation
 
-- Reboot to [`modified TWRP Recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery).
-
-- Open recovery terminal and type `format` (it will format win and esp partition)
+- Download the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
-- Flash [`Nabu WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller) and Wait till all process completed and Windows setup appear.
+- Download normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/) or you can download [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk)
+
+- Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder in a PENDRIVE. (Yes, you can also install it using PENDRIVE.)
+  
+- Reboot to the Modded TWRP, Open terminal and type `format`.
+- Now baCk to main screen tap on INSTALL > select WinInstaller.zip and swip to flash, then reboot to the system.
+  
+- Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times.)
+
+---
   
 - Double click on `Android` icon from desktop, to switch back in android (from windows) .
 
