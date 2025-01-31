@@ -14,6 +14,8 @@
 ## Re-Installation
 
 - Reboot to [`modified TWRP Recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery).
+
+- Open recovery terminal and type `format` (it will format win and esp partition)
   
 - Flash [`Nabu WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller) and Wait till all process completed and Windows setup appear.
   
