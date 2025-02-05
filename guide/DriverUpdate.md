@@ -13,9 +13,13 @@
   
 
 ## Driver Update
+- Boot to Windows and remove encryption (if storage is encrypted)
+
+- reboot back to Android (do not switch off / force reboot)
+
 - Download Wininstaller.zip
   
-- Reboot to modded TWRP Recovery.
+- Boot to modded TWRP Recovery.
   
 - Flash **```Nabu-WinInstaller.zip```** and wait till all process complete and tab automatically reboot. (It takes longer time to remove older drivers and update new)
 #
