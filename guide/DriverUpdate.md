@@ -5,9 +5,11 @@
 #
 
 ## Prerequisites
-- [`Moded TWRP recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Moded-TWRP-Recovery)
+- [`Modded TWRP recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
 - [`Nabu-WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller)
+
+- Full battery (takes approx. 3.5hrs)
   
 
 ## Driver Update
