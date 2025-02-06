@@ -13,7 +13,7 @@
   
 
 ## Driver Update
-- Boot to Windows and remove encryption (if storage is encrypted)
+- Boot to Windows and remove encryption (if storage is encrypted) and disable hibernation
 
 - reboot back to Android (do not switch off / force reboot)
 
