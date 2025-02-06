@@ -21,7 +21,9 @@
   
 - Boot to modded TWRP Recovery.
   
-- Flash **```Nabu-WinInstaller.zip```** and wait till all process complete and tab automatically reboot. (It takes longer time to remove older drivers and update new)
+- Flash **```Nabu-WinInstaller.zip```** and reboot to system when finish
+  
+- Wait till all process complete and tab automatically reboot. (It takes longer time to remove older drivers and update new)
 #
 ## Dualboot
   
