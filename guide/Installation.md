@@ -25,25 +25,26 @@
 
 ---
 
-## Partitioning Userdata
+## 1st Step :- Partitioning Userdata
 - Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases)
   
-- Boot into _**Modded TWRP Recovery**_ (either through the fastboot command or you can permanently flash it using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md)).
+- Boot into _**Modded TWRP Recovery**_ (either through the fastboot command `fastboot boot \path\to\modded_twrp.img` or you can permanently flash it using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md)).
 
-- Flash magisk.apk (if not already rooted).
+- Goto Install - select - magisk.apk and swip to flash (if not already rooted).
 
-- Now go to the terminal and type `partition $$` (replace `$$` with the Windows partition size in GB you want, like `partition 60`).
+- Now Main Screen - Advance - terminal and type `partition $$` (replace `$$` with the Windows partition size in GB you want, like `partition 60`).
  
-- Reboot to the system and complete the Android and Magisk setup.
+- Reboot to the system and complete the Android setup.
+- Download and install [Magisk.apk](https://github.com/topjohnwu/Magisk/releases) h open it and reboot if asked.
   
 > [!NOTE]
-> If it fails to boot into Android and returns to TWRP, then type the `partition` command again and reboot.
+> If it fails to boot into Android and returns to TWRP, type the `partition` command again and reboot.
 
 ---
 
-## Windows Installation
+## 2nd step :- Windows Installation
 
 - Download the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
@@ -51,13 +52,13 @@
 
 - Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder in a PENDRIVE. (Yes, you can also install it using PENDRIVE.)
   
-- Reboot to the Modded TWRP > Install > select WinInstaller.zip and swip to flash, then reboot to the system.
+- Reboot to the Modded TWRP - Install - select WinInstaller.zip and swip to flash, if finished reboot to the system.
   
-- Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times.)
+- Wait until all processes are completed and the Windows setup appears. (It will take maximum 10 to 15 minutes and eventually reboot 2 or 3 times.)
 
 ---
 
-#### Dualboot Setup:
+#### 3rd Step :- Dualboot Setup:
 - Double-click the `Android` icon on the desktop to switch to Android (from Windows).
 - To boot from Android to Windows, install the [Woa-Helper.apk](https://github.com/n00b69/woa-helper/releases) from the Download folder, allow root permissions, and press `QUICK BOOT TO WINDOWS`.
 
