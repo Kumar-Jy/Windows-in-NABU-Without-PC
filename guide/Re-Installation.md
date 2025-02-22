@@ -20,15 +20,17 @@
   
 - Download normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/) or you can download [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk)
 
-- Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder in a PENDRIVE. (Yes, you can also install it using PENDRIVE.)
+- Place the Windows ESD/wim file and wininstaller.zip in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder in a PENDRIVE. (Yes, you can also install it using PENDRIVE.)
   
-- Reboot to the Modded TWRP, Open terminal and type `format`.
-- Now back to twrp main screen tap on INSTALL > select WinInstaller.zip and swip to flash, and if finished just reboot to the system.
+- Reboot to the Modded TWRP, Goto`Advance-Terminal` and type command`format`.
+- 
+- Now back to TWRP home screen - INSTALL > select WinInstaller.zip and swip to flash.
   
-- Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 1 or 2 times.)
+- Reboot it to system if finished and Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 1 or 2 times.)
 
 ---
-  
+ ## Dualboot Setup
+ 
 - Double click on `Android` icon from desktop, to switch back in android (from windows) .
 
 - For booting into Windows (from Android), Download and Open [Woa-Helper.apk](https://github.com/n00b69/woa-helper/releases/tag/APK) app, allow root permission and press `QUICK BOOT TO WINDOWS`
