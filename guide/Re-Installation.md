@@ -23,9 +23,9 @@
 - Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder in a PENDRIVE. (Yes, you can also install it using PENDRIVE.)
   
 - Reboot to the Modded TWRP, Open terminal and type `format`.
-- Now baCk to main screen tap on INSTALL > select WinInstaller.zip and swip to flash, then reboot to the system.
+- Now back to twrp main screen tap on INSTALL > select WinInstaller.zip and swip to flash, and if finished just reboot to the system.
   
-- Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 2 or 3 times.)
+- Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 1 or 2 times.)
 
 ---
   
