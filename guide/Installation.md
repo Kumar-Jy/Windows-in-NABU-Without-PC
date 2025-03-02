@@ -26,6 +26,9 @@
 ---
 
 ## 1st Step :- Partitioning Userdata
+<details>
+  <summary><strong>Click here for Partitioning</strong></summary> 
+  
 - Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
   
 - Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases)
@@ -42,9 +45,13 @@
 > [!NOTE]
 > If it fails to boot into Android and returns to TWRP, type the `partition` command again and reboot.
 
+</details>
+
 ---
 
 ## 2nd step :- Windows Installation
+<details>
+  <summary><strong>Click here for Installation</strong></summary>
 
 - Download the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
   
@@ -56,22 +63,34 @@
   
 - Wait until all processes are completed and the Windows setup appears. (It will take maximum 10 to 15 minutes and eventually reboot 2 or 3 times.)
 
----
+</details>
 
-#### 3rd Step :- Dualboot Setup:
+---
+## 3rd Step :- Dualboot Setup:
+<details>
+  <summary><strong>Click here for Dualboot Setup</strong></summary>
+  
 - Double-click the `Android` icon on the desktop to switch to Android (from Windows).
 - To boot from Android to Windows, install the [Woa-Helper.apk](https://github.com/n00b69/woa-helper/releases) from the Download folder, allow root permissions, and press `QUICK BOOT TO WINDOWS`.
 
-#### Miscellaneous:
-- Locate `Toolbox.zip` in the `C:\` drive. It contains various useful files and folders.
-- To install Microsoft Office, connect to the internet and run `Office Tool Plus.exe` from the `office_tool` folder.
-- For AtlasOS, unzip and run `AMEWizard`, select `AtlasPlaybook.apbx`, and follow the instructions.
-- For Windows and Office activation, connect to the internet, unzip `Toolbox.zip` from the C:\ drive, and run `winactivator.bat` as an administrator.
-- You can also install miscellaneous frameworks from the `FRAMEWORK` folder.
+</details>
 
 ---
 
+## Miscellaneous:
+<details>
+  <summary><strong>Click here for Miscellaneous</strong></summary>
+  
+- Locate `Toolbox` folder in the `C:\` drive. It contains various useful files and folders.
+- To install Microsoft Office, connect to the internet and run `Office Tool Plus.exe` from the `office_tool` folder.
+- For AtlasOS, unzip and run `AMEWizard`, select `AtlasPlaybook.apbx`, and follow the instructions.
+- For Windows and Office activation, connect to the internet run `winactivator.bat` as an administrator.
+
+</details>
+
 ## Troubleshooting
+<details>
+  <summary><strong>Click here for Troubleshooting</strong></summary>
 
 #### After clicking on the Android icon from the Windows desktop, if it boots into TWRP recovery:
 > - (This error generally occurs if you are using a custom ROM and flashed WinInstaller from an inactive partition.)
@@ -88,5 +107,6 @@
 > 
 > Locate the `backup` folder on your device's internal storage and save it to a safe place (such as Google Drive).
 
+</details>
 ---
 
