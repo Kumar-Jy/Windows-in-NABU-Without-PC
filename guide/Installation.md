@@ -41,13 +41,13 @@
 
 - Connect your other android phone with xiaomi pad 5 using usb otg cable.
 
-- Open website `https://arkt-7.github.io/nabu/` in your Android device - tap on **connect device Fastboot** and choose **Android** , it will display the device details. [you can use bugjaeger or termux app]
+- Open website [https://arkt-7.github.io/nabu/](https://arkt-7.github.io/nabu/) in your Android device - tap on `connect device Fastboot` and choose `Android` , it will display the device details. [you can use bugjaeger or termux app]
 
-- Now goto **Boot Any Image** - select the `modded-twrp.img` - tap on **Boot** , twrp should be opened in pad 5.
+- Now goto `Boot Any Image` - select the `modded-twrp.img` - tap on `Boot` , twrp should be opened in pad 5.
 
-- Now Disconnect the usb otg - Goto **Install** in twrp - select - **magisk.apk** and swip to flash (Skip this if it is already rooted).
+- Now Disconnect the usb otg - Goto `Install` in twrp - select - `magisk.apk` and swip to flash (Skip this if it is already rooted).
 
-- Now, Main Screen - **Advance** - **terminal** and type `partition $` (replace `$` with the Windows partition size in GB you want, like `partition 60`).
+- Now, Main Screen - `Advance` - `terminal` and type `partition $` (replace `$` with the Windows partition size in GB you want, like `partition 60`).
  
 - Reboot to the system and complete the Android setup.
 
