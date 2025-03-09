@@ -8,7 +8,11 @@
 ## Prerequisites
 - ```Unlocked bootloader``` - (If not unlocked, Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide)
 
-- `Installed Custom Recovery` - (If not installed, use [this](TWRPInstallation.md) guide)
+- `Other Android Devices for booting into modded recovery` - (or if you can use [this](TWRPInstallation.md) guide to install twrp permanently)
+
+- `USB otg cable for connecting your Android phone with Xiaomi Pad 5`
+
+- `Modded recovery for creating partition and Installing Windows`
 
 -  ```A Working Brain```
 #
@@ -29,21 +33,26 @@
 <details>
   <summary><strong>Click here for Partitioning</strong></summary> 
   
-- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
+- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) in your other Android device.
   
-- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases)
-  
-- Boot into _**Modded TWRP Recovery**_ (either through the fastboot command `fastboot boot \path\to\modded_twrp.img` or you can permanently flash it using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md)).
+- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases) in your Xiaomi Pad 5.
 
-- Goto Install - select - magisk.apk and swip to flash (if not already rooted).
+- Reboot xiaomi pad 5 and press and hold volume down to boot into fastboot.
 
-- Now Main Screen - Advance - terminal and type `partition $$` (replace `$$` with the Windows partition size in GB you want, like `partition 60`).
+- Connect your other android phone with xiaomi pad 5 using usb otg cable.
+
+- Open website `https://arkt-7.github.io/nabu/` in your Android device - tap on **connect device Fastboot** and choose **Android** , it will display the device details. [you can use bugjaeger or termux app]
+
+- Now goto **Boot Any Image** - select the `modded-twrp.img` - tap on **Boot** , twrp should be opened in pad 5.
+
+- Now Disconnect the usb otg - Goto **Install** in twrp - select - **magisk.apk** and swip to flash (Skip this if it is already rooted).
+
+- Now, Main Screen - **Advance** - **terminal** and type `partition $` (replace `$` with the Windows partition size in GB you want, like `partition 60`).
  
 - Reboot to the system and complete the Android setup.
+
 - Download and install [Magisk.apk](https://github.com/topjohnwu/Magisk/releases) h open it and reboot if asked.
-  
-> [!NOTE]
-> If it fails to boot into Android and returns to TWRP, type the `partition` command again and reboot.
+
 
 </details>
 
