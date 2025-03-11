@@ -8,7 +8,7 @@
 ## Prerequisites
 - ```Unlocked bootloader``` - (If not unlocked, Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide)
 
-- `Other Android Devices for booting into modded recovery` - (or if you can use [this](TWRPInstallation.md) guide to install twrp permanently)
+- `Other Android Devices/PC for booting into modded recovery` - (or you can use [this](TWRPInstallation.md) guide to install twrp permanently)
 
 - `USB otg cable for connecting your Android phone with Xiaomi Pad 5`
 
@@ -33,44 +33,45 @@
 <details>
   <summary><strong>Click here for Partitioning</strong></summary> 
   
-- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) in your other Android device.
-  
-- Download [Magisk Manager apk](https://github.com/topjohnwu/Magisk/releases) in your Xiaomi Pad 5.
+- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) to both your Android device and Xiaomi Pad 5.
 
-- Reboot xiaomi pad 5 and press and hold volume down to boot into fastboot.
+- Download the [Magisk Manager APK](https://github.com/topjohnwu/Magisk/releases) to your Xiaomi Pad 5.
 
-- Connect your other android phone with xiaomi pad 5 using usb otg cable.
+- Reboot your Pad 5 into Fastboot mode by pressing and holding the volume down and power buttons.
 
-- Open website [https://arkt-7.github.io/nabu/](https://arkt-7.github.io/nabu/) in your Android device - tap on `connect device Fastboot` and choose `Android` , it will display the device details. [you can use bugjaeger or termux app]
+- Connect your Android phone/PC to your Pad 5 using a USB OTG cable, and open the website [https://arkt-7.github.io/nabu/](https://arkt-7.github.io/nabu/) in any browser (Chrome is recommended).
 
-- Now goto `Boot Any Image` - select the `modded-twrp.img` - tap on `Boot` , twrp should be opened in pad 5.
+- Click on `Connect Device Fastboot` and select `Android`. It will connect and display your Pad 5’s information.
 
-- Now Disconnect the usb otg - Goto `Install` in twrp - select - `magisk.apk` and swip to flash (Skip this if it is already rooted).
+- Now, go to `Boot Any Image`, select `modded-twrp.img`, tap on `Boot`, and TWRP should open on your Pad 5.
 
-- Now, Main Screen - `Advance` - `terminal` and type `partition $` (replace `$` with the Windows partition size in GB you want, like `partition 60`).
- 
+- If it fails, you can use the command `fastboot boot modded-twrp.img` through platform-tools on a PC or through the Bugjaeger or Termux app on Android to boot your Pad 5 into the modded TWRP recovery.
+
+- Now, disconnect the USB OTG cable. Go to `Install` in TWRP, select `magisk.apk`, and swipe to flash (skip this step if your device is already rooted).
+
+- Now, on the main screen, go to `Advanced` > `Terminal` and type `partition $` (replace `$` with the desired partition size in GB, like `partition 60`).
+
 - Reboot to the system and complete the Android setup.
 
-- Download and install [Magisk.apk](https://github.com/topjohnwu/Magisk/releases) h open it and reboot if asked.
-
+- Download and install [Magisk.apk](https://github.com/topjohnwu/Magisk/releases), open it, and reboot if prompted.
 
 </details>
 
 ---
 
-## 2nd step :- Windows Installation
+## 2nd Step: Windows Installation
 <details>
-  <summary><strong>Click here for Installation</strong></summary>
+  <summary><strong>Click here for Installation</strong></summary>
 
 - Download the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
-  
-- Download normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/) or you can download [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk)
 
-- Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder in a PENDRIVE. (Yes, you can also install it using PENDRIVE.)
-  
-- Reboot to the Modded TWRP - Install - select WinInstaller.zip and swip to flash, if finished reboot to the system.
-  
-- Wait until all processes are completed and the Windows setup appears. (It will take maximum 10 to 15 minutes and eventually reboot 2 or 3 times.)
+- Download a normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/), or you can download [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk).
+
+- Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder on a USB drive. (Yes, you can also install it using a USB drive.)
+
+- Reboot to the Modded TWRP, go to Install, select `WinInstaller.zip`, and swipe to flash. Once finished, reboot to the system.
+
+- Wait until all processes are completed, and the Windows setup appears. (This may take a maximum of 10 to 15 minutes and will eventually reboot 2 or 3 times.)
 
 </details>
 
