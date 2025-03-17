@@ -6,13 +6,15 @@
 #
 
 ## Prerequisites
-- ```Unlocked bootloader``` - (If not unlocked, Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide)
+- Unlocked bootloader - Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide, if not unlocked.
 
-- `Other Android Devices/PC for booting into modded recovery` - (or you can use [this](TWRPInstallation.md) guide to install twrp permanently)
+- Other Android Devices/PC - ```for booting into modded recovery```
 
-- `USB otg cable for connecting your Android phone with Xiaomi Pad 5`
+- USB otg cable - ``` for connecting your Android phone with Xiaomi Pad 5```
 
-- `Modded recovery for creating partition and Installing Windows`
+- [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) - ``` Download it to both your Android device and Pad 5 ```
+
+- [Magisk Manager APK](https://github.com/topjohnwu/Magisk/releases) - ``` Download it in Pad 5 and rename it to magisk.zip ```
 
 -  ```A Working Brain```
 #
@@ -29,31 +31,21 @@
 
 ---
 
-## 1st Step :- Partitioning Userdata
+## 1st Step :- Rooting and Partitining UserData
 <details>
-  <summary><strong>Click here for Partitioning</strong></summary> 
+  <summary><strong>Click here for Rooting Guide</strong></summary> 
   
-- Download [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) to both your Android device and Xiaomi Pad 5.
+- Reboot your Pad 5 into Fastboot mode by pressing power and volume down button together.
 
-- Download the [Magisk Manager APK](https://github.com/topjohnwu/Magisk/releases) to your Xiaomi Pad 5.
+- Connect pad 5 with Android phone/PC using a USB OTG cable, and boot it into twrp using command `fastboot boot modded-twrp-nabu.img` either through [Bugjaeger app](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) or [termux](https://github.com/Kumar-Jy/trrtool) or through this [web application](https://arkt-7.github.io/nabu/) (open it in chrome).
+  
+- TWRP should be opened , Go to Advance - Install Recovery Ramdisk - select Modded-Twrp.img from Download folder and swip to install.
+  
+- Now go to `Install`, select `magisk.zip` from Download folder, and swipe to Install (skip this step if your device is already rooted).
 
-- Reboot your Pad 5 into Fastboot mode by pressing and holding the volume down and power buttons.
+- Twrp main screen > `Advanced` > `Terminal` and type `partition $` (replace `$` with the desired partition size in GB, like `partition 60`) and press enter.
 
-- Connect your Android phone/PC to your Pad 5 using a USB OTG cable, and open the website [https://arkt-7.github.io/nabu/](https://arkt-7.github.io/nabu/) in any browser (Chrome is recommended).
-
-- Click on `Connect Device Fastboot` and select `Android`. It will connect and display your Pad 5’s information.
-
-- Now, go to `Boot Any Image`, select `modded-twrp.img`, tap on `Boot`, and TWRP should open on your Pad 5.
-
-- If it fails, you can use the command `fastboot boot modded-twrp.img` through platform-tools on a PC or through the Bugjaeger or Termux app on Android to boot your Pad 5 into the modded TWRP recovery.
-
-- Now, disconnect the USB OTG cable. Go to `Install` in TWRP, select `magisk.apk`, and swipe to flash (skip this step if your device is already rooted).
-
-- Now, on the main screen, go to `Advanced` > `Terminal` and type `partition $` (replace `$` with the desired partition size in GB, like `partition 60`).
-
-- Reboot to the system and complete the Android setup.
-
-- Download and install [Magisk.apk](https://github.com/topjohnwu/Magisk/releases), open it, and reboot if prompted.
+- Reboot to the system and complete the Android setup, Download and install [Magisk.apk](https://github.com/topjohnwu/Magisk/releases), open it and reboot if prompted.
 
 </details>
 
