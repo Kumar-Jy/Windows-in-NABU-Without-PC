@@ -23,7 +23,7 @@
 - Place the Windows ESD/wim file and wininstaller.zip in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder in a PENDRIVE. (Yes, you can also install it using PENDRIVE.)
   
 - Reboot to the Modded TWRP, Goto`Advance-Terminal` and type command`format`.
-- 
+
 - Now back to TWRP home screen - INSTALL > select WinInstaller.zip and swip to flash.
   
 - Reboot it to system if finished and Wait until all processes are completed and the Windows setup appears. (It will take 10 to 15 minutes and eventually reboot 1 or 2 times.)
