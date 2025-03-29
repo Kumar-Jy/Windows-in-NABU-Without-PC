@@ -8,11 +8,13 @@
 ## Prerequisites
 - Unlocked bootloader - Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide, if not unlocked.
 
-- Other Android Devices/PC - ```for booting into modded recovery```
+- Other Android Devices/Computer - ```for booting into modded recovery```
 
-- USB otg cable - ``` for connecting your Android phone with Xiaomi Pad 5```
+- USB otg cable - ``` for connecting your Android phone/Computer with Xiaomi Pad 5```
 
-- [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) - ``` Download it to both your Android device and Pad 5 ```
+- [Platform-tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) - ``` if you are using Computer, Download it and unzip to C:\ Drive ```
+
+- [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) - ``` Download it to both your Android device/Computer and Pad 5 ```
 
 - [Magisk Manager APK](https://github.com/topjohnwu/Magisk/releases) - ``` Download it in Pad 5 and rename it to magisk.zip ```
 
@@ -33,7 +35,7 @@
 
 ## 1st Step :- Rooting and Partitining UserData
 <details>
-  <summary><strong>Click here for Rooting Guide</strong></summary> 
+  <summary><strong>Click here for Partitioning Guide</strong></summary> 
   
 - Reboot your Pad 5 into Fastboot mode by pressing power and volume down button together.
 
