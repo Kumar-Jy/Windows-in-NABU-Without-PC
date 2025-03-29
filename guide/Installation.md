@@ -43,7 +43,7 @@
   
 - TWRP should be opened , Go to Advance - Install Recovery Ramdisk - select Modded-Twrp.img from Download folder and swip to install.
   
-- Now go to `Install`, select `magisk.zip` from Download folder, and swipe to Install (skip this step if your device is already rooted).
+- Now go to `Install`, select `magisk.zip` from Download folder, and swipe to Install (skip this step if your device is already rooted with KSU).
 
 - Twrp main screen > `Advanced` > `Terminal` and type `partition $` (replace `$` with the desired partition size in GB, like `partition 60`) and press enter.
 
