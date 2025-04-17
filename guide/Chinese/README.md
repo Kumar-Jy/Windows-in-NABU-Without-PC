@@ -1,34 +1,31 @@
-# _Windows Installation Guide for Xiaomi Pad 5 [Without PC]_
+# _小米平板5 Windows 安装指南【无需电脑】_
 
-<img align="right" src="/guide/nabu.png" width="450" alt="Windows installation on NABU">
+<img align="right" src="/guide/nabu.png" width="450" alt="Windows 安装在 NABU 上">
 
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/nabuwoa)
 
-## Language 
-[```Русский```](/guide/Russian/README.md) | **```English```** | [```中文```](/guide/Chinese/README.md)
+## 语言
+[```Русский```](/guide/Russian/README.md) | [```English```](/README.md) | ```中文``` 
 
-## ⚠️ Warning
-- _We're not responsible for any damage. Do it on your own risk._
-- _This project is in an early stage, follow all the steps carefully._
+## ⚠️ 警告
+- _我们不对任何损坏负责，操作风险自负。_
+- _本项目仍处于早期阶段，请务必仔细按照步骤操作。_
 
 #
-## Get started
-- [_Installation Instructions_](guide/Installation.md)
+## 快速开始
+- [安装说明](Installation-zh.md)
+- [驱动更新](DriverUpdate-zh.md)
+- [重新安装](Re-Installation-zh.md)
+- [常见问题与故障排查](troubleshooting-zh.md)
 
-- [_Update Drivers_](guide/DriverUpdate.md)
-
-- [_Re-Installation_](guide/Re-Installation.md)
-  
-- [_Troubleshooting_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/troubleshooting-en.md)
 #
-## Miscellaneous
-- [_Project Status_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/status.md)
+## 其他
+- [项目状态](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Chinese/status-zh.md)
+- [附加资料](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Chinese/Additional-materials-zh.md)
+- [卸载说明](uninstall-zh.md)
 
-- [_Additional Materials_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Additional-materials-en.md)
-
-- [_Uninstall Instructions_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/uninstall-en.md)
 #
-## Contributors
+## 贡献者
 [<img alt="Icesito68" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/113939920?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Icesito68)
 [<img alt="map220v" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/14368485?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/map220v)
 [<img alt="Renegade Project" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/63859504?s=200&v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/edk2-porting)
