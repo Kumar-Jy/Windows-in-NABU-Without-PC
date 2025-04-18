@@ -7,15 +7,17 @@
 ## 前置条件
 - [`修改后的 TWRP recovery`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)
 - [`Nabu-WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller)
+- **保持电量充足（大约需要 3.5 小时）**
 
-## 驱动更新步骤
+## 驱动更新
 
-1. 启动到 Windows 并移除加密（如存储已加密）。
-2. 重启回安卓（不要关机或强制重启）。
-3. 下载最新版 WinInstaller.zip。
-4. 启动到 修改后的 TWRP Recovery。
-5. 刷入 **`Nabu-WinInstaller.zip`**，完成后重启系统。
-6. 等待所有过程完成，平板会自动重启。（移除旧驱动和更新新驱动会花较长时间）
+- 启动到 Windows 并移除加密（如存储已加密）。
+- 重启回安卓（不要关机或强制重启）。
+- 下载最新版 WinInstaller.zip。
+- 启动到修改后的 TWRP Recovery。
+- 刷入 **`Nabu-WinInstaller.zip`**，完成后重启系统。
+- 等待所有过程完成，平板会自动重启。（移除旧驱动和更新新驱动会花较长时间）
+
 
 ## 双系统切换
 
