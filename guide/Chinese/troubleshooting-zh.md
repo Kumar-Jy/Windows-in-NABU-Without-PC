@@ -1,47 +1,103 @@
-# 常见问题与故障排查
+# 常见问题排查
 
-> 以下是常见问题及解决方法
+## 无法从安卓向 Windows 文件夹移动文件
 
----
+如果你无法将文件移动到 Windows 文件夹，说明你是关机而不是重启了 Windows。解决方法：重新启动进入 Windows，选择“重启”，在重启过程中进入 fastboot，然后再返回安卓。
 
-### 声音和旋转不工作
-- 重启到 recovery 并刷入最新 [UEFI](https://github.com/n00b69/woa-beryllium/releases/tag/UEFI)
+##### 操作完成！
 
-### 安装失败
-- 请确保严格按照官方说明操作，并且手机存储空间不少于 6GB。
+## 设备在 fastboot 或 recovery 下无法识别
+> 这通常说明你没有安装（正确的）USB 驱动
+- 在[这里](https://github.com/n00b69/woa-betalm/releases/download/Qfil/QUD.zip)下载 QUD.zip 并解压。
+- 打开设备管理器，找到名为 **Android**、**ADB Interface** 或 **QUSB_BULK** 的未知设备或有错误的设备。
+- 右键该设备，选择“更新驱动程序” > “浏览文件”，然后选择你刚刚解压的 **QUD 文件夹**。
 
-### 休眠后触摸失效
-- 重启设备，目前暂无永久解决办法。
+##### 操作完成！
 
-### 安卓下无法写入 Windows 分区
-- 这是因为 Windows 关机而非重启导致。解决方法：在 Windows 内点击“重启”，屏幕熄灭后进入 TWRP，再启动安卓。
-- 或在 Windows 内禁用休眠（可用[此脚本](https://github.com/n00b69/woa-beryllium/releases/tag/1.0)）。
-- 如果已设置 Switch to Android 应用，也可直接用它切换到安卓。
+## Windows 下无法充电
+> [!⚠️警告!!]
+> 不要在启用主机模式的情况下使用带电源的 USB 集线器，这可能会损坏你的设备。如果你使用带电源的 USB 集线器，请参考[禁用 USB 主机模式指南](/guide/English/Additional-materials-en.md#Disabling-USB-host-mode)
 
-### USB 不工作
-- 需开启 USB host 模式，参考[此工具](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/USBHost/USB.Host.Mode.Control.V4.0.vbs)。
-- **警告：**如使用带电源的 USB HUB，务必关闭 host 模式，否则可能损坏设备。如果不使用带电源的 HUB，需开启 host 模式，否则无法使用 USB 设备。
+Windows 下仅部分数据线可用。已知可用的数据线有原装 Poco X3 Pro 数据线（USB-A 端有额外的橙/红色针脚），以及 Nimaso 100W USB-C to USB-C 快充线。
 
-### 0xc000021a 蓝屏
-- 通常为 winlogon.exe 故障，建议重新安装 Windows。
+##### 操作完成！
 
-### “计算机意外重启或遇到错误”
-- 需重新安装 Windows，参考[安装说明](Installation-zh.md)。
+## 电脑/笔记本无法识别 fastboot 下的 NABU，怎么办？
+- 下载 [**`QUD.zip`**](https://github.com/n00b69/woa-betalm/releases/download/Qfil/QUD.zip) 并解压。
+- 打开设备管理器，找到名为 Android 或 QUSB_BULK 的未知设备或有错误的设备。
+- 右键，选择 **```更新驱动程序```** → **`浏览文件`**，然后选择你刚刚解压的 QUD 文件夹。
 
-### DRIVER PNP WATCHDOG 蓝屏
-- 可能是触摸面板识别问题。
-- 恢复安卓 boot.img 并重启到安卓。
-- 用 [Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw&pcampaignid=web_share) 查询触摸面板类型，下载对应的 firstboot uefi img 并刷入（[下载链接](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/releases/tag/UEFI-Boot-Image)）。
-- 重启到 recovery 并刷入 wininstaller zip。
-- 重启时按住音量加键再次进入 recovery。
-- 刷入 firstboot uefi img 到 boot 分区。
-- 重启系统，等待 Windows 安装界面出现前不要操作设备。（多次重启属于正常现象）
+##### 完成！
 
-### INACCESSIBLE_BOOT_DEVICE 蓝屏
-- 可能为驱动损坏，建议参考[安装说明](Installation-zh.md)重新安装 Windows。
+## 设备能进入安卓或 Windows，但无法进入 bootloader
 
-### 屏幕变暗
-- 可尝试按电源键休眠再唤醒。
+### 前置条件：
+- [Termux](https://play.google.com/store/apps/details?id=com.termux)
 
-### WiFi/移动数据不可用
-- 重启 Windows，若无效请在 recovery 恢复 modem 和 persist 分区。
+- [Android platform tools](https://developer.android.com/studio/releases/platform-tools)
+
+- [SHRP Recovery](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/1.0/SHRP.img)
+
+#### 如果你能进入安卓：
+- 安装 **Termux** 并授予 root 权限。
+- 使用以下命令安装 **tsu** 和 **parted**，如有提示输入 `Y` 确认：
+```cmd
+pkg install tsu
+```
+```cmd
+pkg install parted
+```
+- 运行以下命令打开 parted：
+```cmd
+parted /dev/block/sda
+```
+- 输入 ```print``` 列出所有分区。
+- 查找名称超过 16 个字符的分区（如 "Basic Data Partition"），记下其分区号。
+- 用 ```name $ test``` 重命名分区，将 **$** 替换为分区号，**test** 替换为你想要的分区名。
+- 输入 ```quit``` 退出。
+
+##### 操作完成！
+
+#### 如果你能进入 Windows：
+- 将 **C:\boot.img** 重命名为 **C:\bootb.img**。
+- 下载 **SHRP recovery** 镜像，重命名为 **boot.img**，放到 `C:\`。
+- 运行 **Switch to Android** 或 **Android** 快捷方式刷入并启动 SHRP recovery。
+- 进入 recovery 后，将设备连接到电脑，运行：
+```cmd
+adb shell parted /dev/block/sda
+```
+- 输入 ```print``` 列出所有分区。
+- 查找名称超过 16 个字符的分区（如 "Basic Data Partition"），记下其分区号。
+- 用 ```name $ test``` 重命名分区，将 **$** 替换为分区号，**test** 替换为你想要的分区名。
+- 输入 ```quit```。
+- 运行 ```adb reboot bootloader```，看到 **FASTBOOT** 标志后，用 ```fastboot flash boot_a path\to\boot.img``` 刷入安卓 boot 镜像。
+- 如果设备无法启动或又回到 recovery，可能还需要对 **boot_b** 做同样操作。
+
+> [!important]
+> 请确保将 UEFI 镜像放回 UEFI 文件夹，或（如用 Windows 方法）将 boot.img 放回 C:\
+
+##### 操作完成！
+
+## 启动时出现 fsa4480.sys 蓝屏死机（BSOD）
+- 打开驱动文件夹
+
+- 从 NABU.xml 中删除 ```<DriverPackageFile Path="$(mspackageroot)\components\QC8150\Device\DEVICE.SOC_QC8150.NABU\Drivers\USB" Name="fsa4480.inf" ID="fsa4480"/>``` 这一行
+
+- 重新安装驱动
+
+- 启动 UEFI
+> [!NOTE]
+> 如果仍然蓝屏，请参考 `reinstall` 指南并使用此驱动包
+
+##### 操作完成！
+
+## 切换到安卓后出现开机循环（Bootloop）
+启动到 fastboot
+
+```
+fastboot set_active other
+fastboot flash boot <boot.img>
+fastboot reboot
+```
+
+##### 操作完成！

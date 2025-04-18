@@ -20,8 +20,8 @@
 
 #
 ## 其他
-- [项目状态](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Chinese/status-zh.md)
-- [附加资料](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Chinese/Additional-materials-zh.md)
+- [项目状态](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/status.md)
+- [附加资料](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Additional-materials-en.md)
 - [卸载说明](uninstall-zh.md)
 
 #
