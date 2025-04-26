@@ -42,9 +42,7 @@
 
 - 使用 USB OTG 数据线将小米平板5与安卓手机/电脑连接，通过 [Bugjaeger app](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share)、[termux](https://github.com/Kumar-Jy/trrtool) 或 [网页版工具](https://arkt-7.github.io/nabu/)（建议用 Chrome 打开），使用命令 `fastboot boot modded-twrp-nabu.img` 启动 TWRP。
 
-- 进入 TWRP 后，前往“高级” - “安装 Recovery Ramdisk” - 选择下载文件夹中的 Modded-Twrp.img，滑动安装。
-
-- 然后进入“安装”，选择下载文件夹中的 `magisk.zip`，滑动安装（如果你的设备已用 KSU 获取 root，可跳过此步）。
+- 然后进入“安装”，选择下载文件夹中的 `magisk.zip`，滑动安装（如果你的设备是预先获取了 root 的，可以跳过此步骤）。
 
 - 回到 TWRP 主界面 > “高级” > “终端”，输入 `partition $`（将 `$` 替换为你想要的分区大小，单位为 GB，如 `partition 60`），回车。
 
