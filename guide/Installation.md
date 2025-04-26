@@ -8,21 +8,18 @@
 ## Prerequisites
 - Unlocked bootloader - Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide, if not unlocked.
 
-- Other Android Devices/Computer - ```for booting into modded recovery```
+- Other Android Devices/Computer or you can permanently flash twrp using this guide - ```for booting pad 5 into modded recovery```
 
-- USB otg cable - ``` for connecting your Android phone/Computer with Xiaomi Pad 5```
+- USB otg cable -  ```for connecting your Android phone/Computer with Xiaomi Pad 5```
 
-- [Platform-tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) - ``` if you are using Computer, Download it and unzip to C:\ Drive ```
+- [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) - ```Download it in your other Android/PC```
 
-- [Modded TWRP recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery) - ``` Download it to both your Android device/Computer and Pad 5 ```
+- [Magisk Manager APK](https://github.com/topjohnwu/Magisk/releases) - ```Download it in Pad 5 and rename to magisk.zip```
 
-- [Magisk Manager APK](https://github.com/topjohnwu/Magisk/releases) - ``` Download it in Pad 5 and rename it to magisk.zip ```
-
--  ```A Working Brain```
+- A Working 🧠 - ```Most Important ```
 #
 
 ## ⚠️ Warning
-> - _This project at it's Initial Stage, use it at your own risk._
 > - _All your data will be erased ! Back up now if needed._
 > - _Backup Important Partition (Boot, EFS, Modem and Persist) and copy it to outside tab memory_
 > - _Do not flash/run the same file/command twice unless specified._
@@ -41,9 +38,7 @@
 
 - Connect pad 5 with Android phone/PC using a USB OTG cable, and boot it into twrp using command `fastboot boot modded-twrp-nabu.img` either through [Bugjaeger app](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share) or [termux](https://github.com/Kumar-Jy/trrtool) or through this [web application](https://arkt-7.github.io/nabu/) (open it in chrome).
   
-- TWRP should be opened , Go to Advance - Install Recovery Ramdisk - select Modded-Twrp.img from Download folder and swip to install.
-  
-- Now go to `Install`, select `magisk.zip` from Download folder, and swipe to Install (skip this step if your device is already rooted with KSU).
+- Now go to `Install`, select `magisk.zip` from Download folder, and swipe to Install (skip this step if your device is already rooted).
 
 - Twrp main screen > `Advanced` > `Terminal` and type `partition $` (replace `$` with the desired partition size in GB, like `partition 60`) and press enter.
 
@@ -63,7 +58,7 @@
 
 - Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder on a USB drive. (Yes, you can also install it using a USB drive.)
 
-- Reboot to the Modded TWRP, go to Install, select `WinInstaller.zip`, and swipe to flash. Once finished, reboot to the system.
+- Reboot to the Modded TWRP again - go to Install - select `WinInstaller.zip`, and swipe to flash. Once finished, reboot to the system.
 
 - Wait until all processes are completed, and the Windows setup appears. (This may take a maximum of 10 to 15 minutes and will eventually reboot 2 or 3 times.)
 
