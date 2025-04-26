@@ -8,7 +8,7 @@
 ## Prerequisites
 - Unlocked bootloader - Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide, if not unlocked.
 
-- Other Android Devices/Computer or you can permanently flash twrp using this guide - ```for booting pad 5 into modded recovery```
+- Other Android Devices/Computer or you can permanently flash twrp using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) - ```for booting pad 5 into modded recovery```
 
 - USB otg cable -  ```for connecting your Android phone/Computer with Xiaomi Pad 5```
 
