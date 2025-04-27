@@ -27,7 +27,7 @@
 - Теперь ваш Xiaomi Pad загрузился в режим восстановления TWRP
 - Перейдите в ``Advanced`` - Нажмите ``Install Recovery Ramdisk`` в нижнем списке
 - Выберите загруженный **twrp.img** из папки Download
-- Проведите для флешинга.
+- Проведите для прошивки.
 - Установите [Magisk Manager.apk](https://github.com/topjohnwu/magisk/releases)
 - Теперь перезагрузитесь и наслаждайтесь!
 </details>
