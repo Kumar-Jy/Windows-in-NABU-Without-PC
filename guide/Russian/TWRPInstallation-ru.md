@@ -2,7 +2,7 @@
 <img align="right" src="/guide/nabu.png" width="400" alt="Windows 11 Running On a Xiaomi Pad 5">
 
 [![скачать](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/91ZdM7HfRdc)
-## Steps for Recovery Installation 
+## Шаги для перманентной установки TWRP 
 ### Предварительные требования
 - _Рабочий мозг (самое важное из всего)_
 - _Необходимо разблокировать загрузчик, если нет, следуйте этому_ [руководству.](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/Russian/Re-rooting-ru.md)
@@ -27,7 +27,7 @@
 - Теперь ваш Xiaomi Pad загрузился в режим восстановления TWRP
 - Перейдите в ``Advanced`` - Нажмите ``Install Recovery Ramdisk`` в нижнем списке
 - Выберите загруженный **twrp.img** из папки Download
-- Проведите для флешинга.
+- Проведите для прошивки.
 - Установите [Magisk Manager.apk](https://github.com/topjohnwu/magisk/releases)
 - Теперь перезагрузитесь и наслаждайтесь!
 </details>
