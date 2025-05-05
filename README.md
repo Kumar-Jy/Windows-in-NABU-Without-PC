@@ -7,6 +7,8 @@
 ## Language 
 [```Русский```](/guide/Russian/README.md) | **```English```** | [```中文```](/guide/Chinese/README.md)
 
+[![Downloads](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/total?style=for-the-badge)](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/total?style=for-the-badge) [![Latest Release Downloads](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/latest/total?style=for-the-badge)](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/latest/total?style=for-the-badge) 
+
 ## ⚠️ Warning
 - _We're not responsible for any damage. Do it on your own risk._
 - _This project is in an early stage, follow all the steps carefully._
