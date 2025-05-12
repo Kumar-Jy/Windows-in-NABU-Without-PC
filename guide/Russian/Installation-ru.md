@@ -1,7 +1,7 @@
 # Установка Windows на Xiaomi Pad 5 [без ПК]
 <img align="right" src="/guide/nabu.png" width="425" alt="Windows 11 Running On A Xiaomi Pad 5">
 
-- [![YouTube](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/57yx5eoBu5U)
+- [![YouTube](https://github.com/Kumar-Jy/Windows-in-PocoF1-Without-PC/assets/20044626/3abc8b52-c5c6-4495-b623-d1312195d639)](https://youtu.be/jxOHm-RiQ6k)
 - [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinInstaller)
 #
 
