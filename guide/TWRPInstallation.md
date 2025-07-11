@@ -15,7 +15,7 @@ _On **both devices (Pad 5 + other phone)**:_
 - Download the correct TWRP file:
   - **For AOSP ROMs** → [NABU-TWRP-AOSP.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/Nabu-TWRP-AOSP.img)
   - **For MIUI/HyperOS** → [NABU-TWRP-HOS.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/Nabu-TWRP-V4-HOS.img)
-    > Also download: [Magisk.apk](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/empty_vendor_boot.img) in your Pad 5 for Root
+> For Root download: [Magisk.apk](https://github.com/topjohnwu/Magisk/releases/download/v29.0/Magisk-v29.0.apk) in your Pad 5 and rename it to ``magisk.zip``
 
 #
 <details>
