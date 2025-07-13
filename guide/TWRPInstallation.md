@@ -7,15 +7,14 @@ This method works for both **AOSP/Custom ROMs** and **Stock MIUI/HyperOS**.
 ## What You Need (For All Setups)
 
 _On your **other Android phone**:_
-- Install:
-  - [Bugjaeger](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share)
-  - [AdAway APK (v6.1.3)](https://github.com/AdAway/AdAway/releases/download/v6.1.3/AdAway-6.1.3-20240706.apk)
+  - **Install**   → [Bugjaeger](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug&pcampaignid=web_share)
+  - **Install**   → [AdAway APK (v6.1.3)](https://github.com/AdAway/AdAway/releases/download/v6.1.3/AdAway-6.1.3-20240706.apk)
+  - **Download**  → [NABU-TWRP-V4.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery)
+  - **Download**  → [empty_vendor_boot.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/empty_vendor_boot.img)  ```Only for AOSP rom```
 
-_On **both devices (Pad 5 + other phone)**:_
-- Download the correct TWRP file:
-  - **For AOSP ROMs** → [NABU-TWRP-AOSP.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/Nabu-TWRP-AOSP.img)
-  - **For MIUI/HyperOS** → [NABU-TWRP-HOS.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/Nabu-TWRP-V4-HOS.img)
-> For Root download: [Magisk.apk](https://github.com/topjohnwu/Magisk/releases/download/v29.0/Magisk-v29.0.apk) in your Pad 5 and rename it to ``magisk.zip``
+_Download On **Xiaomi Pad 5**:_
+  - **Download**  → [NABU-TWRP.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Modded-TWRP-Recovery/Nabu-TWRP-V4-HOS.img)
+  - **Download**  → [Magisk.apk](https://github.com/topjohnwu/Magisk/releases/download/v29.0/Magisk-v29.0.apk)
 
 #
 <details>
@@ -28,7 +27,7 @@ _On **both devices (Pad 5 + other phone)**:_
 3. **Open Bugjaeger** on the other phone → Go to **Fastboot**
 4. **Boot into TWRP**:
    - Type: `fastboot boot`  
-   - Select `NABU-TWRP-HOS.img`
+   - Select `NABU-TWRP.img`
 5. **In TWRP**:
    - Tap `Advanced` → `Flash Recovery Ramdisk`  
    - Select the same TWRP `.img` → Swipe to flash
@@ -40,8 +39,6 @@ _On **both devices (Pad 5 + other phone)**:_
 #
 <details>
 <summary> Setup for <strong>AOSP / Custom ROMs</strong> (Tap to Expand)</summary>
-
-> Also download: [empty_vendor_boot.img](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/empty_vendor_boot.img) in your Android Phone
 
 ### Steps:
 
@@ -57,7 +54,7 @@ _On **both devices (Pad 5 + other phone)**:_
    - Select `empty_vendor_boot.img` and flash
 5. **Boot into TWRP**:
    - Type: `fastboot boot`  
-   - Select `NABU-TWRP-AOSP.img`
+   - Select `NABU-TWRP.img`
 6. **In TWRP**:
    - Tap `Advanced` → `Flash Recovery Ramdisk`  
    - Select the same TWRP `.img` → Swipe to flash
