@@ -54,13 +54,13 @@
 
 - Download the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
 
-- Download a normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/), or you can download [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk).
+- Download a normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/), or [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk) in your Xiaomo Pad 5.
 
-- Place the ESD file in the `Download` folder on your Xiaomi Pad 5 or in the `WOA` folder on a USB drive. (Yes, you can also install it using a USB drive.)
+- Boot to the Modded TWRP (``` fastboot boot modded-twrp.img```) - In twrp, goto Install - select `WinInstaller.zip`, and swipe to flash. Once finished, reboot to the system.
 
-- Reboot to the Modded TWRP again - go to Install - select `WinInstaller.zip`, and swipe to flash. Once finished, reboot to the system.
+- Wait until all processes are completed, and the Windows setup appears.
 
-- Wait until all processes are completed, and the Windows setup appears. (This may take a maximum of 10 to 15 minutes and will eventually reboot 2 or 3 times.)
+- This may take a maximum of 10 to 15 minutes and will eventually reboot 2 or 3 times.
 
 </details>
 
