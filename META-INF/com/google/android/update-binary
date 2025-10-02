@@ -1,0 +1,501 @@
+#!/sbin/sh
+#
+# Copyright (C) 2025-26 https://github.com/Kumar-jy, https://github.com/ArKT-7
+#
+# Made for Windows Installation on WOA Devices 
+#
+
+UPD_ZIP="$3"
+UPD_INTERFACE="/proc/self/fd/$2"
+UPD_TEMP_FOLDER="/tmp/wininstaller"
+IMG_BACKUP_FOLDER="$UPD_TEMP_FOLDER/backup"
+WIN_MOUNT_FOLDER="$UPD_TEMP_FOLDER/win"
+CONFIG_FILE="$UPD_TEMP_FOLDER/wininstaller.conf"
+PE_INSTALLER="$WIN_MOUNT_FOLDER/installer/install.bat"
+#
+BASE_PATH="/dev/block/by-name"  # Base path for named partition symlinks
+WIN_PATH="$BASE_PATH/win"  # Path to the Windows partition block
+ESP_PATH="$BASE_PATH/esp"  # Path to the EFI System Partition (ESP) block
+ESP_PART_NO=$(realpath "$BASE_PATH/esp" | grep -o '[0-9]*$')
+CURRENT_BATTERY=$(cat /sys/class/power_supply/battery/capacity)  # Read current battery percentage
+PARTITION_BACKUP="boot dtbo vendor_boot fsc fsg modemst1 modemst2 persist"  # Partitions to back up, automatically handles A/B and non-A/B devices
+CHAR_WIDTH=49  # Maximum no. of characters per line for formatted output, char exceeding this will wrap automatically to next line
+SELECTION_TIMEOUT=15  # Timeout (in seconds) before auto-selecting the default option in the volume button menu
+BANNER_EXIT="*---------------------Error!----------------------*"  # Banner to display on exit/abort
+#
+set -o pipefail
+
+ui_print() {
+  while [ -n "$1" ]; do
+    if [ -n "$UPD_INTERFACE" ] && [ -w "$UPD_INTERFACE" ]; then
+      echo "ui_print $1" >> "$UPD_INTERFACE"
+        echo "ui_print" >> "$UPD_INTERFACE"
+      else
+        echo "Warning: UPD_INTERFACE ($UPD_INTERFACE) is not writable" >&2
+      fi
+    shift
+  done
+}
+
+print_centered() {
+  local text="$1"
+  # Use the second argument (if provided) or fall back to char_width, defaulting to 50
+  local width="${2:-${CHAR_WIDTH:-50}}"
+  local inner_width=$((width - 2))
+  local text_length=${#text}
+  while [ ${#text} -gt $inner_width ]; do
+    local line="${text:0:$inner_width}"
+    text="${text:$inner_width}"
+    print_centered_line "$line" "$width"
+  done
+  print_centered_line "$text" "$width"
+}
+
+print_centered_line() {
+  local text="$1"
+  local width="$2"
+  local inner_width=$((width - 2))
+  local text_length=${#text}
+  if [ "$text_length" -gt "$inner_width" ]; then
+    text="${text:0:$inner_width}" 
+    text_length=${#text}
+  fi
+  local padding_total=$((inner_width - text_length))
+  local left_padding=$((padding_total / 2))
+  local right_padding=$((padding_total - left_padding))
+  local line="* "
+  while [ "$left_padding" -gt 0 ]; do
+    line+=" "
+    left_padding=$((left_padding - 1))
+  done
+  line+="$text"
+  while [ "$right_padding" -gt 0 ]; do
+    line+=" "
+    right_padding=$((right_padding - 1))
+  done
+  line+=" *"
+  ui_print "$line"
+}
+
+nl_print_centered() { print_centered "$1"; ui_print " ";}
+ln_print_centered() { ui_print " "; print_centered "$1";}
+nln_print_centered() { ui_print " "; print_centered "$1"; ui_print " ";}
+print_exit() { ui_print " "; ui_print "$BANNER_EXIT";}
+
+print_line() {
+  local char="${1:--}"
+  local width="${CHAR_WIDTH:-50}"
+  local line="*"
+  for _ in $(seq 1 "$width"); do
+    line="${line}${char}"
+  done
+  line="${line}*"
+  ui_print "$line"
+}
+
+abort() {
+  print_exit
+  nl_print_centered "$1"
+  umount "$WIN_PATH" "$ESP_PATH"
+  exit 1
+}
+
+current_progress=0.0
+aio_progress() {
+  if [ $# -ne 2 ]; then
+    ui_print "Error: aio_progress expects 2 arguments, got $#"
+    ui_print "Usage: aio_progress <target_fraction> <duration_in_seconds>"
+    return 1
+  fi
+  target="$1"
+  duration="$2"
+  if ! echo "$target" | grep -Eq '^[0-9]+([.][0-9]+)?$'; then
+    ui_print "Error: Target value '$target' is not a valid number"
+    return 1
+  fi
+  if ! echo "$duration" | grep -Eq '^[0-9]+([.][0-9]+)?$'; then
+    ui_print "Error: Duration value '$duration' is not a valid number"
+    return 1
+  fi
+  echo "set_progress $current_progress" >> "$UPD_INTERFACE"
+  sleep 0.05
+  delta=$(awk "BEGIN { print $target - $current_progress }")
+  echo "progress $delta $duration" >> "$UPD_INTERFACE"
+  current_progress=$target
+}
+
+package_extract_folder() {
+  if [ $# -ne 2 ]; then
+    ui_print " Error: package_extract_folder expects 2 arguments, got $#"
+    ui_print " Usage: package_extract_folder <src-folder> <dst-folder>"
+    return 1
+  fi
+  local src="$1"
+  local dst="$2"
+  command -v unzip >/dev/null || { ui_print "Error: unzip not found"; return 1; }
+  mkdir -p "$dst"
+  unzip -o "$UPD_ZIP" "$src/*" -d "$dst" >/dev/null 2>&1 || {
+  ui_print " Failed to extract folder: $src"
+  return 1
+  }
+}
+
+package_extract_file() {
+  if [ $# -ne 2 ]; then
+    ui_print " Error: package_extract_file expects 2 arguments, got $#"
+    ui_print " Usage: package_extract_file <src-file> <dst-file>"
+    return 1
+  fi
+  command -v unzip >/dev/null || { ui_print "Error: unzip not found"; return 1; }
+  if ! unzip -l "$UPD_ZIP" "$1" | grep -q "$1"; then
+    ui_print " Error: File '$1' not found in package"
+    return 1
+  fi
+  if ! unzip -p "$UPD_ZIP" "$1" > "$2"; then
+    ui_print " Failed to extract $1"
+    return 1
+  fi
+}
+
+volumekey() {
+  while true; do
+    getevent -lc 1 2>&1 | grep VOLUME | grep " DOWN" > "$UPD_TEMP_FOLDER/events"
+    if grep -q "VOLUMEUP" "$UPD_TEMP_FOLDER/events"; then
+      return 1
+    elif grep -q "VOLUMEDOWN" "$UPD_TEMP_FOLDER/events"; then
+      return 0
+    fi
+  done
+}
+
+navigate_menu() {
+  options=("$@")
+  count=${#options[@]}
+  selection=0
+  print_line
+  print_centered "Use volume down to select/change the options,"
+  print_centered "Use volume up to select and confirm"
+  print_line
+  while true; do
+    ui_print " "
+    for i in $(seq 0 $((count - 1))); do
+      if [ "$i" -eq "$selection" ]; then
+        ui_print "-> ${options[i]} <-"
+      else
+        ui_print "   ${options[i]}"
+      fi
+    done
+    if volumekey; then
+      selection=$(( (selection + 1) % count ))
+    else
+      #ui_print " "
+      #print_line
+      #print_centered "You selected: ${options[selection]}"
+      #print_line
+      break
+    fi
+  done
+}
+
+volumekey_timeout() {
+  : > "$UPD_TEMP_FOLDER/events"
+  : > "$UPD_TEMP_FOLDER/raw_events"
+  getevent -lc 1 2>&1 > "$UPD_TEMP_FOLDER/raw_events" &
+  pid=$!
+  sleep 1
+  kill -0 $pid 2>/dev/null && kill $pid 2>/dev/null
+  grep VOLUME "$UPD_TEMP_FOLDER/raw_events" | grep " DOWN" > "$UPD_TEMP_FOLDER/events"
+  if grep -q "VOLUMEUP" "$UPD_TEMP_FOLDER/events"; then
+    echo "Volume up detected" >> "$UPD_TEMP_FOLDER/debug.log"
+    return 1
+  elif grep -q "VOLUMEDOWN" "$UPD_TEMP_FOLDER/events"; then
+    echo "Volume down detected" >> "$UPD_TEMP_FOLDER/debug.log"
+    return 0
+  fi
+  echo "No key detected" >> "$UPD_TEMP_FOLDER/debug.log"
+  return 2  
+}
+
+navigate_menu_timeout() {
+  options=("$@")
+  count=${#options[@]}
+  selection="${selection:-0}"
+  start_time=$(date +%s)
+  timeout_duration="${SELECTION_TIMEOUT:-10}"
+  last_selection=-1
+  last_countdown=-1
+  print_line
+  print_centered "Use volume down to select/change options"
+  print_centered "Use volume up to confirm"
+  print_centered "Auto-confirm in $timeout_duration seconds..."
+  print_line
+  ui_print " "
+  for i in $(seq 0 $((count - 1))); do
+    if [ "$i" -eq "$selection" ]; then
+      ui_print " -> ${options[i]} <-"
+    else
+      ui_print "    ${options[i]}"
+    fi
+  done
+  last_selection=$selection
+  while true; do
+    current_time=$(date +%s)
+    elapsed_time=$((current_time - start_time))
+    remaining_time=$((timeout_duration - elapsed_time))
+    if [ "$remaining_time" -ne "$last_countdown" ] && [ "$remaining_time" -ge 0 ]; then
+      #ui_print "Auto-proceed in $remaining_time seconds..." # (for logging)
+      last_countdown=$remaining_time
+    fi
+    if [ "$elapsed_time" -ge "$timeout_duration" ]; then
+      #ui_print " "
+      #print_line
+      #print_centered "Auto-selected: ${options[selection]}"
+      #print_line
+      ui_print " "
+      break
+    fi
+    volumekey_timeout
+    key_result=$?
+    if [ $key_result -eq 0 ]; then
+      selection=$(( (selection + 1) % count ))
+      start_time=$(date +%s)  # reset timeout on key press
+      if [ "$selection" -ne "$last_selection" ]; then
+        ui_print " "
+        for i in $(seq 0 $((count - 1))); do
+          if [ "$i" -eq "$selection" ]; then
+            ui_print " -> ${options[i]} <-"
+          else
+            ui_print "    ${options[i]}"
+          fi
+        done
+        last_selection=$selection
+      fi
+    elif [ $key_result -eq 1 ]; then
+      #ui_print " "
+      #print_line
+      #print_centered "You selected: ${options[selection]}"
+      #print_line
+      ui_print " "
+      break
+    fi
+  done
+  return $selection
+}
+
+verify_device() {
+  current="$(getprop ro.product.device)"
+  if [ "$current" != "$DEVICE_CODE" ]; then
+    print_exit
+    print_centered "This script is only for $DEVICE_CODE "
+    nl_print_centered "Your device is: $current"
+    exit 1
+  fi
+}
+
+round() { awk "BEGIN {print int($1 + 0.5)}"; }
+
+verify_part() {
+  UD_PATH="$BASE_PATH/userdata" # Userdata partition block name (same for all devices)
+  if [ ! -e "$WIN_PATH" ] || [ ! -e "$ESP_PATH" ]; then
+    abort "Required partition(s) ($WIN_PATH and/or $ESP_PATH) do not exist."
+  fi
+  local UD_GB=$(awk "BEGIN {print $(blockdev --getsize64 "$UD_PATH") / 1e9}")
+  local WIN_GB=$(awk "BEGIN {print $(blockdev --getsize64 "$WIN_PATH") / 1e9}")
+  local ESP_GB=$(awk "BEGIN {print $(blockdev --getsize64 "$ESP_PATH") / 1e6}")
+  local UD_R=$(round "$UD_GB")
+  local WIN_R=$(round "$WIN_GB")
+  local ESP_R=$(round "$ESP_GB")
+  print_centered "Userdata Size: ${UD_R}GB"
+  print_centered "ESP Size: ${ESP_R}MB"
+  print_centered "Windows Size: ${WIN_R}GB"
+  if [ "$WIN_R" -ge "$WIN_MIN_SIZE" ] && [ "$ESP_R" -ge "$ESP_MIN_SIZE" ]; then
+    print_centered "Partitions verified & meets requirements"
+  else
+    #ui_print "*----------------------Note!---------------------*"
+    print_exit
+    print_centered "Partition size doesn't meet requirements."
+    nl_print_centered "Minimum ${WIN_MIN_SIZE}GB for Windows and ${ESP_MIN_SIZE}MB for ESP partition size are required."
+    exit 1
+  fi
+}
+
+run_gptfix() {
+  for d in /dev/block/sd?; do
+    [ -b "$d" ] && echo "Fixing GPT on $d" &&
+    "$UPD_TEMP_FOLDER/gdisk" "$d" <<< $'x\nj\n\nk\n\nw\nY'
+  done
+}
+
+verify_battery() {
+  [ "$CURRENT_BATTERY" -ge "$REQUIRED_BATTERY" ]
+}
+
+is_windows_installed() {
+  umount "$WIN_PATH"
+  $UPD_TEMP_FOLDER/ntfsfix "WIN_PATH"
+  # capture mount output
+  MOUNT_LOG=$(mount.ntfs "$WIN_PATH" "$WIN_MOUNT_FOLDER" 2>&1)
+
+  # check for unclean NTFS mount (hibernated/Fast Startup) warning 
+  if echo "$MOUNT_LOG" | grep -q "unclean file system"; then
+    print_exit
+    print_centered "NTFS is in an unsafe state! Boot into Windows and"
+    nl_print_centered "disable Fast Startup, then shutdown Windows properly."
+    exit 1
+  fi
+
+  [ -f "$WIN_MOUNT_FOLDER/Windows/explorer.exe" ]
+}
+
+is_partition_rw() { touch "$WIN_MOUNT_FOLDER/rw_test" 2>/dev/null && rm "$WIN_MOUNT_FOLDER/rw_test"; }
+
+backup_partitions() {
+  slot=$(getprop ro.boot.slot_suffix)
+  for part in "$@"; do
+    if [[ "$part" == "boot" || "$part" == "dtbo" || "$part" == "vendor_boot" ]]; then
+      if [ -n "$slot" ] && [ -e "$BASE_PATH/${part}${slot}" ]; then
+        part="${part}${slot}"
+      fi
+    fi
+
+    if [ -e "$BASE_PATH/$part" ]; then
+      dd if="$BASE_PATH/$part" of="$IMG_BACKUP_FOLDER/$part.img" bs=8M
+    fi
+  done
+  for j in /sdcard /external_sd/WOA /usbstorage/WOA /usb_otg/WOA; do
+    mkdir -p "$j/backup"
+    cp -r -n "$IMG_BACKUP_FOLDER" "$j"
+  done
+}
+
+win_esd_search() {
+  WIN_IMAGE=""
+  for d in /sdcard/Download /external_sd/WOA /usbstorage/WOA /usb_otg/WOA \
+           /sdcard /external_sd /usbstorage /usb_otg; do
+    [ -d "$d" ] || continue
+    for depth in "-maxdepth 1" ""; do
+      WIN_IMAGE=$(find "$d" $depth -type f \( -iname "*.wim" -o -iname "*.esd" \) ! -path "*/Android/*" 2>/dev/null | head -n 1)
+      [ -n "$WIN_IMAGE" ] && { print_centered " Found: $WIN_IMAGE"; return; }
+    done
+
+    ISO=$(find "$d" -type f -iname "*.iso" ! -path "*/Android/*" 2>/dev/null | head -n 1)
+    [ -n "$ISO" ] || continue
+    print_centered " Found ISO: $ISO"
+    DIR=$(dirname "$ISO")
+    "$UPD_TEMP_FOLDER/7za" e "$ISO" "sources/install.*" -o"$DIR" -y >/dev/null 2>&1
+    WIN_IMAGE=$(find "$DIR" -type f \( -iname "install.wim" -o -iname "install.esd" \) | head -n 1)
+    [ -n "$WIN_IMAGE" ] && { print_centered "Extracted: $WIN_IMAGE"; return; }
+  done
+  [ -n "$WIN_IMAGE" ] || { print_centered "No wim/esd or iso found!"; exit 1; }
+}
+
+find_index() {
+  local wim_info_path="$UPD_TEMP_FOLDER/wim_info.txt"
+  "$UPD_TEMP_FOLDER/wimlib-imagex" info "$WIN_IMAGE" > "$wim_info_path" 2>/dev/null
+  for EDITION in "${WINDOWS_EDITIONS[@]}"; do 
+  INDEX=$(grep -B 1 "$EDITION" "$wim_info_path" | awk '/Index/ {print $2; exit}')
+    if [[ -n "$INDEX" ]]; then
+      SELECTED_INDEX="$INDEX"
+      SELECTED_EDITION="$EDITION"
+      print_centered "$SELECTED_EDITION found at Index $SELECTED_INDEX"
+      return 0
+    fi
+  done
+  ui_print " "
+  print_line
+  print_centered "Auto detection FAILED!"
+  print_centered "Please select edition manually:"
+  print_line
+  menu_options=()
+  wim_indexes=()
+  i=0
+  while IFS= read -r line; do
+    case "$line" in
+	  *Index:*)
+	    idx=$(echo "$line" | awk '{print $2}')
+	    waiting_for_name=1
+	    ;;
+	  *Name:*)
+	    if [ "$waiting_for_name" = "1" ]; then
+		  name=$(echo "$line" | sed 's/^Name:[ \t]*//')
+		  num=$((i + 1))
+		  menu_options+=("Option $num: $name")
+		  wim_indexes+=("$idx")
+		  i=$((i + 1))
+		  waiting_for_name=0
+	    fi
+	    ;;
+	  *)
+	    ;;
+    esac
+  done < "$wim_info_path"
+  if [ "${#menu_options[@]}" -eq 0 ]; then
+    abort "No editions found in $WIN_IMAGE"
+  fi
+  cancel_index=$(( ${#menu_options[@]} + 1 ))
+  menu_options+=("Option $cancel_index: Cancel")
+  selection=$((${#menu_options[@]} - 2))
+  navigate_menu_timeout "${menu_options[@]}"
+  selection=$?
+  if [ "$selection" -eq "${#menu_options[@]}" ] || [ "$selection" -eq $((${#menu_options[@]} - 1)) ]; then
+    abort "Error really? you cancelled edition selection"
+  fi
+  SELECTED_INDEX="${wim_indexes[$selection]}"
+  chosen_label="${menu_options[$selection]}"
+  SELECTED_EDITION="${chosen_label#*: }"
+  print_centered "$SELECTED_EDITION found at Index $SELECTED_INDEX"
+  return 0
+}
+
+format_win() {
+  umount "$WIN_PATH"
+  mkfs.ntfs -f "$WIN_PATH" -L "$WIN_PART_NAME"
+}
+
+Windows_Installation() {
+print_centered "Proceeding with formatting and installation"
+    print_line
+    print_centered "Searching for Windows Image"
+    win_esd_search
+    print_line
+    print_centered "Verifying Windows Edition"
+    find_index
+    print_line
+    print_centered "Installing $SELECTED_EDITION...."
+    format_win
+    "$UPD_TEMP_FOLDER/wimlib-imagex" apply "$WIN_IMAGE" "$SELECTED_INDEX" "$WIN_PATH"
+}
+
+rm -rf "$UPD_TEMP_FOLDER"
+mkdir -p "$UPD_TEMP_FOLDER"
+mkdir -p "$IMG_BACKUP_FOLDER"
+mkdir -p "$WIN_MOUNT_FOLDER"
+
+package_extract_file "wininstaller.conf" "$CONFIG_FILE" || {
+    ui_print " "
+    ui_print " Error: Wininstaller configuration file not found or empty"
+    ui_print " " 
+    ui_print " Make sure you have the file (wininstaller.conf) in main directory with all configrations"
+    ui_print " " 
+    exit 1
+}
+
+package_extract_file "META-INF/com/google/android/updater-script" "$UPD_TEMP_FOLDER/updater-script" || {
+    ui_print " Cannot extract updater-script. Do you have it in package?"
+    exit 1
+}
+
+for b in gdisk ntfsfix wimlib-imagex 7za; do
+    package_extract_file "META-INF/com/bin/$b" "$UPD_TEMP_FOLDER/$b"
+done
+
+chmod -R 0777 "$UPD_TEMP_FOLDER"
+
+# Source the updater-script (Only if it's a valid shell script)
+if grep -q "^#!/" "$UPD_TEMP_FOLDER/updater-script"; then
+    . "$UPD_TEMP_FOLDER/updater-script" "$@"
+else
+    ui_print " Error: updater-script is not a shell script"
+    exit 1
+fi
+exit $?
