@@ -7,7 +7,7 @@
 ## Language 
 [```Русский```](/guide/Russian/README.md) | **```English```** | [```中文```](/guide/Chinese/README.md)
 
-[![Downloads](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/total?style=for-the-badge)](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/total?style=for-the-badge) [![Latest Release Downloads](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/latest/total?style=for-the-badge)](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/latest/total?style=for-the-badge) 
+[![Downloads](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/total?style=for-the-badge)](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/total?style=for-the-badge)
 
 ## ⚠️ Warning
 - _We're not responsible for any damage. Do it on your own risk._
@@ -20,6 +20,8 @@
 - [_Update Drivers_](guide/DriverUpdate.md)
 
 - [_Re-Installation_](guide/Re-Installation.md)
+
+- [_Backup and Restore Windows_](guide/Backup-Restore.md)
   
 - [_Troubleshooting_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/troubleshooting-en.md)
 #
