@@ -1,0 +1,138 @@
+name: Build Nabu-Installer ZIP
+
+on:
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install 7zip
+        run: sudo apt-get update && sudo apt-get install -y p7zip-full
+
+      - name: Define driver and UEFI URLs
+        run: |
+          echo "DRIVER_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu-Driver.zip" >> $GITHUB_ENV
+          echo "UEFI_URL=https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/releases/download/UEFI/nabu-uefi-v4.img" >> $GITHUB_ENV
+
+      - name: Set build date and artifact name
+        run: |
+          BUILD_DATE=$(date '+%d-%b-%Y')
+          echo "BUILD_DATE=$BUILD_DATE" >> $GITHUB_ENV
+          echo "ARTIFACT_NAME=nabu-wininstaller-$BUILD_DATE" >> $GITHUB_ENV
+          echo "ZIP_NAME=NABU_WinInstaller_${BUILD_DATE}.zip" >> $GITHUB_ENV
+
+      - name: Generate wininstaller.conf
+        run: |
+          cat << EOF > wininstaller.conf
+          # ================================ Configurations ================================
+          DEVICE_CODE="nabu"
+          WIN_MIN_SIZE=30
+          ESP_MIN_SIZE=349
+          REQUIRED_BATTERY=50
+          WIN_PART_NAME="WINNABU"
+          ESP_PART_NAME="ESPNABU"
+          SECURE_BOOT="TRUE"
+          WINDOWS_EDITIONS=(
+            "Windows 11 Pro"
+            "Windows 11 IoT Enterprise LTSC"
+            "Windows 11 Enterprise LTSC"
+            "Windows 11 Enterprise"
+            "Windows 11 Home"
+            "Windows 10 Pro"
+            "Windows 10 Home"
+          )
+          DEVICE_NAME="Xiaomi Pad 5"
+          WI_VERSION="WinInstaller_NABU_R8.3.2"
+          BUILD_DATE="$BUILD_DATE"
+          MAINTAINER="Project-Aloha,map220v,remtrik And idk"
+          # ============================== Configurations End ==============================
+          EOF
+  
+      - name: Create temp and target directories
+        run: |
+          mkdir -p driver-temp
+          mkdir -p checksum-temp
+          mkdir -p installer/Driver
+          mkdir -p ToolBox
+
+      - name: Download drivers archive
+        run: curl -L "$DRIVER_URL" -o driver.7z
+
+      - name: Extract all drivers to temp folder
+        run: 7z x driver.7z -odriver-temp
+
+      - name: Copy selected directories into installer/Driver
+        run: |
+          for dir in components definitions tools apps; do
+            find driver-temp -type d -name "$dir" -print0 |
+              while IFS= read -r -d '' match; do
+                echo "Copying: $match"
+                cp -r "$match" installer/Driver/
+              done
+          done
+          rm -rf installer/Driver/tools/DriverUpdater/X86 installer/Driver/tools/DriverUpdater/AMD64
+
+      - name: Download uefi.img
+        run: curl -L "$UEFI_URL" -o installer/uefi.img
+
+      - name: Download pe.img
+        run: |
+          curl -L https://github.com/Kumar-Jy/WinInstaller/releases/download/WinPE/pe.img \
+          -o installer/pe.img
+
+      - name: Setup ToolBox
+        run: |
+          curl -L https://github.com/Misha803/My-Scripts/releases/download/WOA-ToolBox/WOA-Toolbox-NEW.exe \
+          -o ToolBox/ToolBox.exe
+          curl -L https://github.com/asheroto/Deploy-Office/releases/latest/download/Deploy-Office.exe \
+          -o ToolBox/Deploy-Office.exe
+          curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AtlasPlaybook_v0.4.1.apbx \
+          -o ToolBox/AtlasPlaybook.apbx
+
+      - name: Download Woa-Helper
+        run: |
+          curl -L https://github.com/n00b69/woa-helper/releases/download/APK/BETAwoahelper1.8.4.41.apk \
+          -o woahelper.apk
+
+      - name: Generate and copy SHA-256 checksums
+        run: |
+          cd installer && find . -type f -print0 | xargs -0 sha256sum > ../checksum-temp/sha256sum
+          cp ../checksum-temp/sha256sum sha256sum
+
+      - name: Cleanup temp folders
+        continue-on-error: true
+        run: |
+          rm -rf driver-temp checksum-temp driver.7z
+
+      - name: Upload installer artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: |
+            installer
+            ToolBox
+            META-INF
+            wininstaller.conf
+            woahelper.apk
+
+      - name: Create Final ZIP
+        run: |
+          7z a "${ZIP_NAME}" installer ToolBox META-INF wininstaller.conf woahelper.apk
+
+      - name: Upload release (GitHub Release)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: NABU_WinInstaller
+          files: ${{ env.ZIP_NAME }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
