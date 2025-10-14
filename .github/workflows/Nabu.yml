@@ -35,7 +35,7 @@ jobs:
           # ================================ Configurations ================================
           DEVICE_CODE="nabu"
           WIN_MIN_SIZE=30
-          ESP_MIN_SIZE=349
+          ESP_MIN_SIZE=345
           REQUIRED_BATTERY=50
           WIN_PART_NAME="WINNABU"
           ESP_PART_NAME="ESPNABU"
@@ -85,7 +85,7 @@ jobs:
 
       - name: Download pe.img
         run: |
-          curl -L https://github.com/Kumar-Jy/WinInstaller/releases/download/WinPE/pe.img \
+          curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/WinPE/WinPE23H2.img \
           -o installer/pe.img
 
       - name: Setup ToolBox
