@@ -96,6 +96,8 @@ jobs:
           -o ToolBox/Deploy-Office.exe
           curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AtlasPlaybook_v0.4.1.apbx \
           -o ToolBox/AtlasPlaybook.apbx
+          curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/Dism++10ARM.zip \
+          -o ToolBox/Dism++.zip
 
       - name: Download Woa-Helper
         run: |
