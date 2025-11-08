@@ -332,7 +332,7 @@ verify_battery() {
 
 is_windows_installed() {
   umount "$WIN_PATH"
-  $UPD_TEMP_FOLDER/ntfsfix "WIN_PATH"
+  $UPD_TEMP_FOLDER/ntfsfix -b -d "WIN_PATH"
   # capture mount output
   MOUNT_LOG=$(mount.ntfs "$WIN_PATH" "$WIN_MOUNT_FOLDER" 2>&1)
 
@@ -450,6 +450,7 @@ find_index() {
 format_win() {
   umount "$WIN_PATH"
   mkfs.ntfs -f "$WIN_PATH" -L "$WIN_PART_NAME"
+  $UPD_TEMP_FOLDER/ntfsfix -b -d "WIN_PATH"
 }
 
 Windows_Installation() {
