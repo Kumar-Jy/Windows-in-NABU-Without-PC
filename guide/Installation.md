@@ -8,7 +8,7 @@
 ## Prerequisites
 - Unlocked bootloader - Use [this](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/unlock-bootloader-en.md) guide, if not unlocked.
 
-- Other Android Devices/Computer or you can permanently flash twrp using [this guide](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/TWRPInstallation.md) - ```for booting pad 5 into modded recovery```
+- Other Android Devices/Computer - ```for booting pad 5 into modded recovery```
 
 - USB otg cable -  ```for connecting your Android phone/Computer with Xiaomi Pad 5```
 
@@ -52,9 +52,9 @@
 <details>
   <summary><strong>Click here for Installation</strong></summary>
 
-- Download the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller).
+- Download/copy the latest [`WinInstaller.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Nabu-WinInstaller) in the Xiaomi Pad 5 internal storage.
 
-- Download a normal [`Windows ARM ESD`](https://arkt-7.github.io/woawin/), or [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk) in your Xiaomo Pad 5.
+- Download/copy a normal Windows ARM iso from [`Microsoft`](https://www.microsoft.com/en-us/software-download/windows11arm64)  [`latest ESD image`](https://arkt-7.github.io/woawin/), or [`24h2 IoT LTSC`](https://drive.google.com/file/d/1WvTUIldcmffprJ2ZrdrLjlKqlz_vSlYa/view?usp=drivesdk) in your Xiaomo Pad 5 internal storage.
 
 - Boot to the Modded TWRP (``` fastboot boot modded-twrp.img```) - In twrp, goto Install - select `WinInstaller.zip`, and swipe to flash. Once finished, reboot to the system.
 
@@ -108,4 +108,5 @@
 
 </details>
 ---
+
 
