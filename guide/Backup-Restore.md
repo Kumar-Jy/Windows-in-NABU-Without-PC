@@ -19,9 +19,9 @@
 ---
  ## Restore Windows
  
-- make sure you already have win and esp partition.
+- Make sure you already have win and esp partition.
  
-- Download [NABU_SB_NSB_boot_switcher_V4.zip]('https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/NABU_SB_NSB_boot_switcher_V4.zip)
+- Download [`NABU_SB_NSB_boot_switcher_V4.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/NABU_SB_NSB_boot_switcher_V4.zip)
  
 - Reboot to Modded-TWRP-Recovery goto`Advance` **>** `Terminal` and type command `restorewin` - press enter or type the custom path if you have copied the winbackup.wim at any other location.
 
