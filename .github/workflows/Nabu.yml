@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install 7zip
         run: sudo apt-get update && sudo apt-get install -y p7zip-full
@@ -94,14 +94,16 @@ jobs:
           -o ToolBox/ToolBox.exe
           curl -L https://github.com/asheroto/Deploy-Office/releases/latest/download/Deploy-Office.exe \
           -o ToolBox/Deploy-Office.exe
-          curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AtlasPlaybook_v0.4.1.apbx \
+          curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AtlasPlaybook_v0.5.0-hotfix.apbx \
           -o ToolBox/AtlasPlaybook.apbx
+          curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AME.Beta.exe \
+          -o ToolBox/AME-Wizard.exe
           curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/Dism++10ARM.zip \
           -o ToolBox/Dism++.zip
 
       - name: Download Woa-Helper
         run: |
-          curl -L https://github.com/n00b69/woa-helper/releases/download/APK/BETAwoahelper1.8.4.41.apk \
+          curl -L https://github.com/n00b69/woa-helper/releases/download/APK/BETAwoahelper1.8.4.44.apk \
           -o woahelper.apk
 
       - name: Generate and copy SHA-256 checksums
