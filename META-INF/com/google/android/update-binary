@@ -331,7 +331,7 @@ verify_battery() {
 }
 
 is_windows_installed() {
-  umount "$WIN_PATH"
+  umount -lf "$WIN_PATH" 2>/dev/null
   $UPD_TEMP_FOLDER/ntfsfix -b -d "WIN_PATH"
   # capture mount output
   MOUNT_LOG=$(mount.ntfs "$WIN_PATH" "$WIN_MOUNT_FOLDER" 2>&1)
@@ -344,7 +344,7 @@ is_windows_installed() {
     exit 1
   fi
 
-  [ -f "$WIN_MOUNT_FOLDER/Windows/explorer.exe" ]
+  [ -f "$WIN_MOUNT_FOLDER//Windows/System32/ntoskrnl.exe" ]
 }
 
 is_partition_rw() { touch "$WIN_MOUNT_FOLDER/rw_test" 2>/dev/null && rm "$WIN_MOUNT_FOLDER/rw_test"; }
@@ -392,6 +392,9 @@ win_esd_search() {
 find_index() {
   local wim_info_path="$UPD_TEMP_FOLDER/wim_info.txt"
   "$UPD_TEMP_FOLDER/wimlib-imagex" info "$WIN_IMAGE" > "$wim_info_path" 2>/dev/null
+  if ! grep -q "ARM64" "$wim_info_path"; then
+    abort "Incompatible Architecture found. Please Download ARM64 Version."
+    fi
   for EDITION in "${WINDOWS_EDITIONS[@]}"; do 
   INDEX=$(grep -B 1 "$EDITION" "$wim_info_path" | awk '/Index/ {print $2; exit}')
     if [[ -n "$INDEX" ]]; then
@@ -448,9 +451,9 @@ find_index() {
 }
 
 format_win() {
-  umount "$WIN_PATH"
+  umount -lf "$WIN_PATH" 2>/dev/null
   mkfs.ntfs -f "$WIN_PATH" -L "$WIN_PART_NAME"
-  $UPD_TEMP_FOLDER/ntfsfix -b -d "WIN_PATH"
+  $UPD_TEMP_FOLDER/ntfsfix "WIN_PATH"
 }
 
 Windows_Installation() {
