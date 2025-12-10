@@ -21,6 +21,8 @@
 
 - [_Re-Installation_](guide/Re-Installation.md)
 
+- [_Switch Secure/Unsecure Boot_](guide/disable-enable-secureboot.md)
+
 - [_Backup and Restore Windows_](guide/Backup-Restore.md)
   
 - [_Troubleshooting_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/troubleshooting-en.md)
