@@ -15,7 +15,7 @@
 
 - Reboot to Android from Windows (do not switch off / force reboot)
 
-- Download Wininstaller.zip
+- Download NABU_SB_NSB_boot_switcher_V4.zip
   
 - Boot to modded TWRP Recovery.
   
