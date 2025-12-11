@@ -21,7 +21,7 @@
   
 - Flash **```NABU_SB_NSB_boot_switcher_V4.zip```** and reboot to system when finished
   
-- This will automatically detect the correct status of your installed Windows and switch it.
+- This will automatically detect the current status of your installed Windows and switch it.
 #
 ## Dualboot
   
