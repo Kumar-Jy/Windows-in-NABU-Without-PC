@@ -21,6 +21,8 @@
 
 - [_Re-Installation_](guide/Re-Installation.md)
 
+- [_Dual Boot Setup_](guide/DBKP.md)
+
 - [_Switch Secure/Unsecure Boot_](guide/disable-enable-secureboot.md)
 
 - [_Backup and Restore Windows_](guide/Backup-Restore.md)
