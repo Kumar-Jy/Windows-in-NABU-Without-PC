@@ -321,8 +321,9 @@ verify_part() {
 
 run_gptfix() {
   for d in /dev/block/sd?; do
-    [ -b "$d" ] && echo "Fixing GPT on $d" &&
-    "$UPD_TEMP_FOLDER/gdisk" "$d" <<< $'x\nj\n\nk\n\nw\nY'
+    if [ -b "$d" ]; then ui_print "Fixing GPT on $d"
+        printf 'x\nj\n\nk\n\nw\nY\n' | "$UPD_TEMP_FOLDER/gdisk" "$d"
+    fi
   done
 }
 
@@ -392,18 +393,21 @@ win_esd_search() {
 find_index() {
   local wim_info_path="$UPD_TEMP_FOLDER/wim_info.txt"
   "$UPD_TEMP_FOLDER/wimlib-imagex" info "$WIN_IMAGE" > "$wim_info_path" 2>/dev/null
+
   if ! grep -q "ARM64" "$wim_info_path"; then
-    abort "Incompatible Architecture found. Please Download ARM64 Version."
+      abort "Incompatible Architecture found. Please Download ARM64 Version."
     fi
-  for EDITION in "${WINDOWS_EDITIONS[@]}"; do 
-  INDEX=$(grep -B 1 "$EDITION" "$wim_info_path" | awk '/Index/ {print $2; exit}')
-    if [[ -n "$INDEX" ]]; then
-      SELECTED_INDEX="$INDEX"
-      SELECTED_EDITION="$EDITION"
-      print_centered "$SELECTED_EDITION found at Index $SELECTED_INDEX"
-      return 0
-    fi
-  done
+  for EDITION in "${WINDOWS_EDITIONS[@]}"; do
+  INDEX=$(grep -B2 "^Name:[[:space:]]*$EDITION$" "$wim_info_path" | awk '/Index:/ {print $2; exit}')
+  if [ -n "$INDEX" ]; then
+    SELECTED_INDEX="$INDEX"
+    SELECTED_EDITION="$EDITION"
+    BUILD=$(grep -m1 "^Build:" "$wim_info_path" | awk '{print $2}')
+    SPBUILD=$(grep -m1 "^Service Pack Build:" "$wim_info_path" | awk '{print $4}')
+    print_centered "$SELECTED_EDITION ARM64 Build:$BUILD.$SPBUILD found at Index:$SELECTED_INDEX"
+    return 0
+  fi
+done
   ui_print " "
   print_line
   print_centered "Auto detection FAILED!"
