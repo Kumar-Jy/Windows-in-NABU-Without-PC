@@ -1,42 +1,57 @@
-# _Windows Installation Guide for Xiaomi Pad 5 [Without PC]_
+# Windows Installation Guide for Xiaomi Pad 5 (NABU)  
+### *No PC Required*
 
-<img align="right" src="/guide/nabu.png" width="450" alt="Windows installation on NABU">
-
-[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/nabuwoa)
-
-## Language 
-[```Русский```](/guide/Russian/README.md) | **```English```** | [```中文```](/guide/Chinese/README.md)
+<img align="right" src="/guide/nabu.png" width="420" alt="Windows installation on Xiaomi Pad 5 (NABU)">
 
 [![Downloads](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/total?style=for-the-badge)](https://img.shields.io/github/downloads/Kumar-Jy/Windows-in-NABU-Without-PC/total?style=for-the-badge)
 
+[![Telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/nabuwoa)
+
+---
+
+## 🌍 Language
+[Русский](/guide/Russian/README.md) | **English** | [中文](/guide/Chinese/README.md)
+
+---
+
 ## ⚠️ Warning
-- _We're not responsible for any damage. Do it on your own risk._
-- _This project is in an early stage, follow all the steps carefully._
+- **Proceed at your own risk.** We are not responsible for any damage or data loss.
+- This project is **still in an early stage**. Follow all instructions **carefully and in order**.
 
-#
-## Get started
-- [_Installation Instructions_](guide/Installation.md)
+---
 
-- [_Update Drivers_](guide/DriverUpdate.md)
+## 🚀 Getting Started
 
-- [_Re-Installation_](guide/Re-Installation.md)
+- 📘 [_Installation Instructions_](guide/Installation.md)
 
-- [_Dual Boot Setup_](guide/DBKP.md)
+- 🔄 [_Update Drivers_](guide/DriverUpdate.md)
 
-- [_Switch Secure/Unsecure Boot_](guide/disable-enable-secureboot.md)
+- ♻️ [_Re-Installation_](guide/Re-Installation.md)
 
-- [_Backup and Restore Windows_](guide/Backup-Restore.md)
-  
-- [_Troubleshooting_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/troubleshooting-en.md)
-#
-## Miscellaneous
-- [_Project Status_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/status.md)
+- 🔀 [_Dual Boot Setup- No Root_](guide/DBKP.md)
 
-- [_Additional Materials_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Additional-materials-en.md)
+- 🔐 [_Enable / Disable Secure Boot_](guide/disable-enable-secureboot.md)
 
-- [_Uninstall Instructions_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/uninstall-en.md)
-#
-## Contributors
+- 💾 [_Backup & Restore Windows_](guide/Backup-Restore.md)
+
+- 🛠️ [_Troubleshooting_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/troubleshooting-en.md)
+
+---
+
+## 📂 Miscellaneous
+
+- 📌 [_Project Status_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/status.md)
+
+- 📎 [_Additional Materials_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/Additional-materials-en.md)
+
+- 🧹 [_Uninstall Instructions_](https://github.com/erdilS/Port-Windows-11-Xiaomi-Pad-5/blob/main/guide/English/uninstall-en.md)
+
+---
+
+## 🤝 Contributors
+
+Thanks to everyone who made this project possible ❤️
+
 [<img alt="Icesito68" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/113939920?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Icesito68)
 [<img alt="map220v" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/14368485?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/map220v)
 [<img alt="Renegade Project" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/63859504?s=200&v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/edk2-porting)
@@ -68,4 +83,10 @@
 [<img alt="Kumar-Jy" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/20044626?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Kumar-Jy)
 [<img alt="ArKT-7" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/157277855?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/ArKT-7)
 
-----
+---
+
+<p align="center">
+  <strong>Windows on Xiaomi Pad 5 — Community Driven Project</strong>
+</p>
+
+---
