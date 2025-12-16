@@ -7,7 +7,7 @@
 
 ## 📋 Prerequisites
 - [Modded TWRP Recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)  
-- [Nabu_DBKP_VolButton.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_VolButton.zip)  **or**  [Nabu_DBKP_MagneticCover.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagnaticCover.zip)
+- [Nabu_DBKP_VolButton.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_VolButton.zip)  **or**  [Nabu_DBKP_MagneticCover.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagneticCover.zip)
 
 ---
 
