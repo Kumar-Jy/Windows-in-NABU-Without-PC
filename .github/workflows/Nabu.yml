@@ -19,15 +19,15 @@ jobs:
 
       - name: Define driver and UEFI URLs
         run: |
-          echo "DRIVER_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/Nabu-Drivers.zip" >> $GITHUB_ENV
-          echo "UEFI_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/SB-UEFI-v4.img" >> $GITHUB_ENV
+          echo "DRIVER_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/Nabu_Drivers_v2601.19_hotfix.7z" >> $GITHUB_ENV
+          echo "UEFI_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/MiPad5.UEFI-v2601-19.img" >> $GITHUB_ENV
 
       - name: Set build date and artifact name
         run: |
           BUILD_DATE=$(date '+%d-%b-%Y')
           echo "BUILD_DATE=$BUILD_DATE" >> $GITHUB_ENV
-          echo "ARTIFACT_NAME=nabu-wininstaller-$BUILD_DATE" >> $GITHUB_ENV
-          echo "ZIP_NAME=NABU_WinInstaller_${BUILD_DATE}.zip" >> $GITHUB_ENV
+          echo "ARTIFACT_NAME=nabu-wininstaller-v260119-$BUILD_DATE" >> $GITHUB_ENV
+          echo "ZIP_NAME=NABU_WinInstaller_V260119_${BUILD_DATE}.zip" >> $GITHUB_ENV
 
       - name: Generate wininstaller.conf
         run: |
@@ -50,7 +50,7 @@ jobs:
             "Windows 10 Home"
           )
           DEVICE_NAME="Xiaomi Pad 5"
-          WI_VERSION="WinInstaller_NABU_R8.3.2"
+          WI_VERSION="WinInstaller_NABU_R8.3.3"
           BUILD_DATE="$BUILD_DATE"
           MAINTAINER="Project-Aloha,map220v,remtrik And idk"
           # ============================== Configurations End ==============================
@@ -96,8 +96,10 @@ jobs:
           -o ToolBox/Deploy-Office.exe
           curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AtlasPlaybook_v0.5.0-hotfix.apbx \
           -o ToolBox/AtlasPlaybook.apbx
-          curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AME.Beta.exe \
-          -o ToolBox/AME-Wizard.exe
+          curl -L https://github.com/n00b69/modified-playbooks/releases/download/ReviOS/Revi-PB-25.10.apbx \
+          -o ToolBox/ReviPlaybook.apbx
+          curl -L https://download.ameliorated.io/AME%20Wizard%20Beta.zip \
+          -o ToolBox/AME-Wizard.zip
           curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/Dism++10ARM.zip \
           -o ToolBox/Dism++.zip
 
