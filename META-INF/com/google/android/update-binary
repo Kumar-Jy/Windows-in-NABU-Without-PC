@@ -311,7 +311,6 @@ verify_part() {
   if [ "$WIN_R" -ge "$WIN_MIN_SIZE" ] && [ "$ESP_R" -ge "$ESP_MIN_SIZE" ]; then
     print_centered "Partitions verified & meets requirements"
   else
-    #ui_print "*----------------------Note!---------------------*"
     print_exit
     print_centered "Partition size doesn't meet requirements."
     nl_print_centered "Minimum ${WIN_MIN_SIZE}GB for Windows and ${ESP_MIN_SIZE}MB for ESP partition size are required."
@@ -330,25 +329,6 @@ run_gptfix() {
 verify_battery() {
   [ "$CURRENT_BATTERY" -ge "$REQUIRED_BATTERY" ]
 }
-
-is_windows_installed() {
-  umount -lf "$WIN_PATH" 2>/dev/null
-  $UPD_TEMP_FOLDER/ntfsfix -b -d "WIN_PATH"
-  # capture mount output
-  MOUNT_LOG=$(mount.ntfs "$WIN_PATH" "$WIN_MOUNT_FOLDER" 2>&1)
-
-  # check for unclean NTFS mount (hibernated/Fast Startup) warning 
-  if echo "$MOUNT_LOG" | grep -q "unclean file system"; then
-    print_exit
-    print_centered "NTFS is in an unsafe state! Boot into Windows and"
-    nl_print_centered "disable Fast Startup, then shutdown Windows properly."
-    exit 1
-  fi
-
-  [ -f "$WIN_MOUNT_FOLDER//Windows/System32/ntoskrnl.exe" ]
-}
-
-is_partition_rw() { touch "$WIN_MOUNT_FOLDER/rw_test" 2>/dev/null && rm "$WIN_MOUNT_FOLDER/rw_test"; }
 
 backup_partitions() {
   slot=$(getprop ro.boot.slot_suffix)
@@ -369,6 +349,25 @@ backup_partitions() {
   done
 }
 
+is_windows_installed() {
+  umount -lf "$WIN_PATH" 2>/dev/null
+  $UPD_TEMP_FOLDER/ntfsfix -b -d "WIN_PATH"
+  # capture mount output
+  MOUNT_LOG=$(mount.ntfs "$WIN_PATH" "$WIN_MOUNT_FOLDER" 2>&1)
+
+  # check for unclean NTFS mount (hibernated/Fast Startup) warning 
+  if echo "$MOUNT_LOG" | grep -q "unclean file system"; then
+    print_exit
+    print_centered "NTFS is in an unsafe state! Boot into Windows and"
+    nl_print_centered "disable Fast Startup, then shutdown Windows properly."
+    exit 1
+  fi
+
+  [ -f "$WIN_MOUNT_FOLDER/Windows/System32/ntoskrnl.exe" ]
+}
+
+is_partition_rw() { touch "$WIN_MOUNT_FOLDER/rw_test" 2>/dev/null && rm "$WIN_MOUNT_FOLDER/rw_test"; }
+
 win_esd_search() {
   WIN_IMAGE=""
   for d in /sdcard/Download /external_sd/WOA /usbstorage/WOA /usb_otg/WOA \
@@ -387,7 +386,7 @@ win_esd_search() {
     WIN_IMAGE=$(find "$DIR" -type f \( -iname "install.wim" -o -iname "install.esd" \) | head -n 1)
     [ -n "$WIN_IMAGE" ] && { print_centered "Extracted: $WIN_IMAGE"; return; }
   done
-  [ -n "$WIN_IMAGE" ] || { print_centered "No wim/esd or iso found!"; exit 1; }
+  [ -n "$WIN_IMAGE" ] || { abort "No wim/esd or iso found!"; }
 }
 
 find_index() {
