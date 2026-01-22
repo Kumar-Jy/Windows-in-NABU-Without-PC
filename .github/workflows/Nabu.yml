@@ -82,8 +82,9 @@ jobs:
           rm -rf installer/Driver/tools/DriverUpdater/X86 installer/Driver/tools/DriverUpdater/AMD64
 
       - name: Download uefi.img
-        run: curl -L "$UEFI_URL" -o installer/uefi.img
-        run: curl -L "$UEFI_boot_URL" -o installer/uefiboot.img
+        run: |
+          curl -L "$UEFI_URL" -o installer/uefi.img
+          curl -L "$UEFI_boot_URL" -o installer/uefiboot.img
 
       - name: Download pe.img
         run: |
