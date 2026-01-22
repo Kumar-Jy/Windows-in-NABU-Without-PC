@@ -20,8 +20,8 @@ jobs:
       - name: Define driver and UEFI URLs
         run: |
           echo "DRIVER_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/Nabu_Drivers_v2601.19_hotfix.7z" >> $GITHUB_ENV
-          echo "UEFI_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/MiPad5.UEFI-v2601-19.img" >> $GITHUB_ENV
-          echo "UEFI_Hotfix_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/MiPad5.UEFI-v2601-19-hotfix.img" >> $GITHUB_ENV
+          echo "UEFI_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/MiPad5.UEFI-v2601-19-hotfix.img" >> $GITHUB_ENV
+          echo "UEFI_boot_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/MiPad5.UEFI-v2601-19.img" >> $GITHUB_ENV
 
       - name: Set build date and artifact name
         run: |
@@ -83,7 +83,7 @@ jobs:
 
       - name: Download uefi.img
         run: curl -L "$UEFI_URL" -o installer/uefi.img
-        run: curl -L "$UEFI_Hotfix_URL" -o installer/uefihotfix.img
+        run: curl -L "$UEFI_boot_URL" -o installer/uefiboot.img
 
       - name: Download pe.img
         run: |
