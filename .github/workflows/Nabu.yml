@@ -20,14 +20,15 @@ jobs:
       - name: Define driver and UEFI URLs
         run: |
           echo "DRIVER_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/Nabu_Drivers_v2601.19_hotfix.7z" >> $GITHUB_ENV
-          echo "UEFI_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/MiPad5.UEFI-v2601-19-hotfix.img" >> $GITHUB_ENV
+          echo "UEFI_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/MiPad5.UEFI-v2601-19.img" >> $GITHUB_ENV
+          echo "UEFI_Hotfix_URL=https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Drivers-And-UEFI/MiPad5.UEFI-v2601-19-hotfix.img" >> $GITHUB_ENV
 
       - name: Set build date and artifact name
         run: |
           BUILD_DATE=$(date '+%d-%b-%Y')
           echo "BUILD_DATE=$BUILD_DATE" >> $GITHUB_ENV
           echo "ARTIFACT_NAME=nabu-wininstaller-v260119-$BUILD_DATE" >> $GITHUB_ENV
-          echo "ZIP_NAME=NABU_WinInstaller_V260119_${BUILD_DATE}.zip" >> $GITHUB_ENV
+          echo "ZIP_NAME=NABU_WinInstaller_V260119_Hotfix_${BUILD_DATE}.zip" >> $GITHUB_ENV
 
       - name: Generate wininstaller.conf
         run: |
@@ -82,6 +83,7 @@ jobs:
 
       - name: Download uefi.img
         run: curl -L "$UEFI_URL" -o installer/uefi.img
+        run: curl -L "$UEFI_Hotfix_URL" -o installer/uefihotfix.img
 
       - name: Download pe.img
         run: |
@@ -98,7 +100,7 @@ jobs:
           -o ToolBox/AtlasPlaybook.apbx
           curl -L https://github.com/n00b69/modified-playbooks/releases/download/ReviOS/Revi-PB-25.10.apbx \
           -o ToolBox/ReviPlaybook.apbx
-          curl -L https://download.ameliorated.io/AME%20Wizard%20Beta.zip \
+          curl -L https://download.ameliorated.io/AME%20Beta.zip \
           -o ToolBox/AME-Wizard.zip
           curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/Dism++10ARM.zip \
           -o ToolBox/Dism++.zip
