@@ -112,7 +112,7 @@ mkdir -p /sdcard/UEFI
 dd if="$WIN_MOUNT_FOLDER/installer/uefi.img" of="/sdcard/UEFI/uefi.img" bs=1M || { abort "Error copying uefi.img"; }
 dd if="/sdcard/backup/boot$(getprop ro.boot.slot_suffix).img" of="$WIN_MOUNT_FOLDER/boot.img" bs=16M || { abort "Error copying boot.img in Windows"; }
 dd if="$WIN_MOUNT_FOLDER/installer/pe.img" of="$BASE_PATH/esp" bs=16M || { abort "Error flashing WinPE.img"; }
-dd if="$WIN_MOUNT_FOLDER/installer/uefi.img" of="$BASE_PATH/boot$(getprop ro.boot.slot_suffix)" bs=1M || { abort "Error flashing uefi on boot partition"; }
+dd if="$WIN_MOUNT_FOLDER/installer/uefiboot.img" of="$BASE_PATH/boot$(getprop ro.boot.slot_suffix)" bs=1M || { abort "Error flashing uefi on boot partition"; }
 umount "$WIN_PATH" "$ESP_PATH"
 sleep 1
 print_line =
