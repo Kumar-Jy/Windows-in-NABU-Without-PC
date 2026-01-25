@@ -21,7 +21,7 @@ print_centered "Made by: Kumar_Jy & ArKT"
 print_centered "Help and suggestions by: Sog, Andre_grams"
 print_centered "Drivers & UEFI: $MAINTAINER"
 print_line =
-# verify_device
+verify_device
 print_centered "Verifying required Partitions"
 verify_part
 print_line # Prints a banner line using CHAR_WIDTH length of '-' (or custom character), wrapped with '*' on both ends
