@@ -357,10 +357,7 @@ is_windows_installed() {
 
   # check for unclean NTFS mount (hibernated/Fast Startup) warning 
   if echo "$MOUNT_LOG" | grep -q "unclean file system"; then
-    print_exit
-    print_centered "NTFS is in an unsafe state! Boot into Windows and"
-    nl_print_centered "disable Fast Startup, then shutdown Windows properly."
-    exit 1
+    abort "NTFS is in an unsafe state! Boot into Windows and reboot to android, then try again."
   fi
 
   [ -f "$WIN_MOUNT_FOLDER/Windows/System32/ntoskrnl.exe" ]
