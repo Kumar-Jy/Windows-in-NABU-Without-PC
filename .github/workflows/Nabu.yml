@@ -42,8 +42,8 @@ jobs:
           SECURE_BOOT="TRUE"
           WINDOWS_EDITIONS=(
             "Windows 11 Pro"
-            "Windows 11 IoT Enterprise LTSC"
-            "Windows 11 Enterprise LTSC"
+            "Windows 11 IoT Enterprise LTSC 2024"
+            "Windows 11 Enterprise LTSC 2024"
             "Windows 11 Enterprise"
             "Windows 11 Home"
             "Windows 10 Pro"
