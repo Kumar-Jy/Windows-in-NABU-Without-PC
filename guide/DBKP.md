@@ -7,8 +7,11 @@
 
 ## 📋 Prerequisites
 - [Modded TWRP Recovery](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery)  
-- [Nabu_DBKP_VolButton.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_VolButton.zip)  **or**  [Nabu_DBKP_MagneticCover.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagneticCover.zip)
-
+- [Nabu_DBKP_VolButton_OldDriver.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_VolButton.zip)  **or**
+- [Nabu_DBKP_MagneticCover_OldDriver.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagneticCover.zip)
+> [!IMPORTANT]
+> ⚠️ Only Magnatic Cover DBKP is currently available for New Driver
+> [Nabu_DBK_MagnaticCover_NewDriver.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagneticCover_NewDriver.zip).
 ---
 
 ## 🔘 Dual Boot via Volume Button
