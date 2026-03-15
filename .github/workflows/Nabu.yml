@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install 7zip
         run: sudo apt-get update && sudo apt-get install -y p7zip-full
