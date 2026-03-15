@@ -99,7 +99,7 @@ jobs:
           -o ToolBox/Deploy-Office.exe
           curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AtlasPlaybook_v0.5.0-hotfix.apbx \
           -o ToolBox/AtlasPlaybook.apbx
-          curl -L https://github.com/n00b69/modified-playbooks/releases/download/ReviOS/Revi-PB-25.10-hotfix.apbx \
+          curl -L https://github.com/Kumar-Jy/WinInstaller/releases/download/files/Revi-PB-25.10-Hotfix.apbx \
           -o ToolBox/ReviPlaybook.apbx
           curl -L https://download.ameliorated.io/AME%20Beta.zip \
           -o ToolBox/AME-Wizard.zip
