@@ -93,22 +93,22 @@ jobs:
 
       - name: Setup ToolBox
         run: |
-          curl -L https://github.com/Misha803/My-Scripts/releases/download/WOA-ToolBox/WOA-Toolbox-NEW.exe \
+          curl -L https://github.com/Misha803/WOA-Tools/releases/Download/latest/WOA-Toolbox-NEW.exe \
           -o ToolBox/ToolBox.exe
           curl -L https://github.com/asheroto/Deploy-Office/releases/latest/download/Deploy-Office.exe \
           -o ToolBox/Deploy-Office.exe
-          curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/AtlasPlaybook_v0.5.0-hotfix.apbx \
+          curl -L https://github.com/WOAFlasher/WinInstaller/releases/download/files/AtlasPlaybook_v0.5.0-hotfix.apbx \
           -o ToolBox/AtlasPlaybook.apbx
-          curl -L https://github.com/Kumar-Jy/WinInstaller/releases/download/files/Revi-PB-25.10-Hotfix.apbx \
+          curl -L https://github.com/WOAFlasher/WinInstaller/releases/download/files/Revi-PB-26.04.apbx \
           -o ToolBox/ReviPlaybook.apbx
-          curl -L https://download.ameliorated.io/AME%20Beta.zip \
-          -o ToolBox/AME-Wizard.zip
+          curl -L https://github.com/Ameliorated-LLC/trusted-uninstaller-cli/releases/download/0.8.4/AME-Beta-v0.8.4.exe \
+          -o ToolBox/AME-Wizard.exe
           curl -L https://github.com/Kumar-Jy/WOAInstaller/releases/download/files/Dism++10ARM.zip \
           -o ToolBox/Dism++.zip
 
       - name: Download Woa-Helper
         run: |
-          curl -L https://github.com/n00b69/woa-helper/releases/download/APK/BETAwoahelper1.8.4.45.apk \
+          curl -L https://github.com/n00b69/woa-helper/releases/download/APK/woahelper1.8.5.apk \
           -o woahelper.apk
 
       - name: Generate and copy SHA-256 checksums
@@ -126,7 +126,7 @@ jobs:
           7z a "${ZIP_NAME}" installer ToolBox META-INF wininstaller.conf woahelper.apk
 
       - name: Upload release (GitHub Release)
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: Nabu-WinInstaller
           files: ${{ env.ZIP_NAME }}
