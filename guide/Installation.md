@@ -30,6 +30,36 @@
 
 ---
 
+## 💻 ADB & Fastboot Setup
+
+If your host machine isn't configured yet, choose your platform below to set up your flashing environment:
+<details> 
+<summary>🪟 Method A: Using a Windows PC</summary>
+
+1. Download the official [Google Platform Tools for Windows](https://developer.android.com/tools/releases/platform-tools).
+2. Extract the contents of the ZIP folder to an easy-to-reach location (e.g., `C:\platform-tools`).
+3. Open **Windows Terminal** or **Command Prompt** and navigate to your folder:
+ ```cmd
+cd C:\platform-tools
+```
+4. **Driver Note:** If your phone shows up with a yellow warning triangle in Device Manager while in Fastboot mode, download and install the official
+[Google USB Drivers](https://developer.android.com/studio/run/win-usb)
+
+</details>
+
+<details>
+<summary>📱 Method B: Using Another Android Phone (OTG)</summary>
+
+You can flash your device using a secondary Android phone via a USB-OTG adapter.
+
+1. Install: **Bugjaeger Mobile ADB - USB OTG** from the Google Play Store.
+2. Connect both phones using a USB cable and Plug the OTG adapter into the host phone
+3. Launch Bugjaeger - Accept the USB permission prompt
+4. Go to Fastboot section- Open the Commands tab (terminal icon) to run ADB/Fastboot commands
+</details>
+
+---
+
 ## 1st Step :- Rooting and Partitining UserData
 <details>
   <summary><strong>Click here for Partitioning Guide</strong></summary> 
