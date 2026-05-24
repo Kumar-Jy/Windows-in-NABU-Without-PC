@@ -29,7 +29,6 @@
 ---
 
 ## 📱 Dual Boot via rEFIned Boot Menu
-1. use this guide to [Disable Secure Boot](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/blob/main/guide/disable-enable-secureboot.md)
 
 3. Download [**Nabu_DBKP_rEFIned_Boot**](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_rEFIned_Boot.zip)
    
