@@ -93,7 +93,7 @@ jobs:
 
       - name: Setup ToolBox
         run: |
-          curl -L https://github.com/Misha803/WOA-Tools/releases/Download/latest/WOA-Toolbox-NEW.exe \
+          curl -L https://github.com/Misha803/WOA-Tools/releases/latest/download/WOA-Toolbox-NEW.exe \
           -o ToolBox/ToolBox.exe
           curl -L https://github.com/asheroto/Deploy-Office/releases/latest/download/Deploy-Office.exe \
           -o ToolBox/Deploy-Office.exe
