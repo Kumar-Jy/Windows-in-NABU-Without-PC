@@ -4,7 +4,24 @@
 
 
 > [!IMPORTANT]
-> ⚠️ Volume Button DBKP is currently not available for New Driver
+> ⚠️ Volume Button DBKP and Magnetic Cover DBKP is currently not available for New Driver
+
+---
+## 📱 Dual Boot via rEFIned Boot Menu
+
+3. Download
+   [**Nabu_DBKP_rEFIned_Boot_v260803**](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_rEFIned_Boot_v260119.zip)
+     or  
+   [**Nabu_DBKP_rEFIned_Boot_v260119**](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_rEFIned_Boot_v260803.zip) 
+   
+5. Reboot to [**modded TWRP Recovery**](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery).
+
+7.  Flash **`Nabu_DBKP_rEFIned_Boot`** and reboot to system when finished.
+
+### Usage
+- Reboot tab and wait for boot menu
+
+- Navigate with Vol_Up / Vol_Down and press power button to select
 
 ---
 
@@ -13,9 +30,9 @@
 1. Reboot to **Android** if your Pad 5 is currently in Windows.
   
 3. Download [**Nabu_DBKP_MagneticCover.zip**]
-  - [Nabu_DBKP_MagneticCover_OldDriver.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagneticCover.zip).
+  - [Nabu_DBKP_MagneticCover_V4-Driver.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagneticCover.zip).
     - **OR**
-  - [Nabu_DBK_MagnaticCover_NewDriver.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagneticCover_NewDriver.zip).
+  - [Nabu_DBK_MagnaticCover_v260119.zip](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_MagneticCover_NewDriver.zip).
 
 4. Boot into **modded TWRP Recovery**.
 
@@ -30,7 +47,10 @@
 
 ## 📱 Dual Boot via rEFIned Boot Menu
 
-3. Download [**Nabu_DBKP_rEFIned_Boot**](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_rEFIned_Boot.zip)
+3. Download
+   [**Nabu_DBKP_rEFIned_Boot_v260803**](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_rEFIned_Boot_v260119.zip)
+   or
+   [**Nabu_DBKP_rEFIned_Boot_v260119**](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/Nabu_DBKP_rEFIned_Boot_v260119.zip) 
    
 5. Reboot to [**modded TWRP Recovery**](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/tag/Modded-TWRP-Recovery).
 
