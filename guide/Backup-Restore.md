@@ -21,11 +21,23 @@
  
 - Make sure you already have win and esp partition.
  
-- Download [`NABU_SB_NSB_boot_switcher_V4.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/NABU_SB_NSB_boot_switcher_V4.zip)
+- Download [`NABU_fix_BCD_boot.zip`](https://github.com/Kumar-Jy/Windows-in-NABU-Without-PC/releases/download/Files/NABU_BCD_boot_fix.zip)
  
 - Reboot to Modded-TWRP-Recovery goto`Advance` **>** `Terminal` and type command `restorewin` - press enter or type the custom path if you have copied the winbackup.wim at any other location.
 
-- Flash/Sideload `NABU_SB_NSB_boot_switcher_V4.zip`
+- Flash/Sideload `NABU_fix_BCD_boot.zip`
 
 - Reboot if flashing done.
-#
+
+---
+## Setup Dual-Boot
+
+- Download the [UEFI.img](https://github.com/remtrik-stuff/MiPad5-Windows-Releases/releases) and copy it inside the folder named `UEFI` in your internal storage.
+  
+- Install [WOA-Helper.apk](https://github.com/n00b69/woa-helper/releases/tag/APK) , open it and grant root permission.
+  
+- Go to ***BACKUP BOOT IMAGE***.
+  
+- Select ***WINDOWS*** as the target.
+  
+- Now, press the ***QUICKBOOT TO WINDOWS*** button.
